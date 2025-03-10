@@ -27,7 +27,14 @@ over the next few weeks.
 
 ## Media
 
-#### Beyond Good and Evil by Frederick Nietzsche 
+#### Beyond Good and Evil by Frederick Nietzsche
+
+>*Almost everywhere in Europe today we find a pathological sensitivity and receptivity to pain; (...)*
+>*that would use religion and philosophical bric-a-brac to deck itself out as something higher -*
+>*there is a veritable cult of suffering.*
+
+>*Gods enjoy mockery: it seems they cannot suppress laughter even during holy rites.*
+
 A much more openly daring book than *On The Genealogy of Morality* or 
 *Thus Spoke Zarathustra*. He is more direct in his criticism of Christianity, and disdain
 for the "inverted" morality that took root in Europe. His writing has aged well and
