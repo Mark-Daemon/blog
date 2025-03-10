@@ -49,9 +49,9 @@ that so few individuals faced real punishment reflects a failure to disincentivi
 
 Broadly speaking, the existence of conspiracies is an extension of human collaboration adapting to and exploiting
 societal systems. Forming social groups in pursuit of an objective is natural human instinct - it doesn't take a genius
-to coordinate such an action. Through a Darwinian process of trial and error these groups come to find ways to exploit
-societal systems - often guided by unintended incentives already present in the system. Thus, these unintended
-incentives shape the conspiracies that will emerge in a system.
+to coordinate such an action. Through a Darwinian process of trial and error these groups come to uncover ways to manipulate 
+outcomes - often guided by unintended incentives already present. Thus, these incentives shape the 
+conspiracies that will emerge.
 
 
 In summary, what we call conspiracy need not be a top-down centralised design. Their emergence is expected and reflects
