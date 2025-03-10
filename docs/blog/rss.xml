@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+<title>null</title>
+<link>https://mark-daemon.github.io/blog</link>
+<item>
+<title>week_notes_1</title>
+<link>https://mark-daemon.github.io/blog/week_notes/week_notes_1.html</link>
+<description>Started learning Clojure, Gradle woes, and the latest on books.</description>
+<pubDate>2025-03-09</pubDate>
+</item>
+<item>
+<title>index.md</title>
+<link>https://mark-daemon.github.io/blog/home/index.html</link>
+<description>This is my first post!</description>
+<pubDate>2025-01-01</pubDate>
+</item>
+<item>
+<title>index.md</title>
+<link>https://mark-daemon.github.io/blog/about/index.html</link>
+<description>This is my first post!</description>
+<pubDate>2025-01-01</pubDate>
+</item>
+</channel>
+</rss>
