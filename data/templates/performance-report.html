@@ -1,0 +1,39 @@
+<div class="performance-metrics">
+    <div class="metrics-header">
+        WEYLAND-YUTANI CORPORATION
+        <div class="subheader">EMPLOYEE PERFORMANCE REPORT</div>
+        <div class="report-meta">
+            <span>BUILD BETTER WORLDS™</span>
+            <span class="report-id">{{ performance.date }} - WY-RPT-#45172</span>
+        </div>
+    </div>
+    <div class="metrics-container">
+        <div class="metric-item">
+            <div class="metric-label">MENTAL ACUITY</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: {{ performance.mental }}">
+                    <div class="metric-glow"></div>
+                </div>
+                <div class="metric-value">{{ performance.mental }}</div>
+            </div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-label">PHYSICAL CAPACITY</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: {{ performance.physical }}">
+                    <div class="metric-glow"></div>
+                </div>
+                <div class="metric-value">{{ performance.physical }}</div>
+            </div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-label">PRODUCTIVITY INDEX</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: {{ performance.productivity }}">
+                    <div class="metric-glow"></div>
+                </div>
+                <div class="metric-value">{{ performance.productivity }}</div>
+            </div>
+        </div>
+    </div>
+</div>

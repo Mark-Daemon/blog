@@ -1,0 +1,161 @@
+(generator.core/reload!)
+(generator.core/reload-all!)
+lein run
+exit
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+    .header::before {
+        display: none; /* Hide alien symbols on very small screens */
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+        padding: 15px; /* Increase padding for better spacing */
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+        padding: 10px;
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(do
+  (require '[generator.core :as core] :reload-all)
+  (core/reload!))
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+(require '[generator.core :as core] :reload-all)
+(core/reload!)
+exit

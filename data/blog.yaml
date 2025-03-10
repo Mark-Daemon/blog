@@ -1,0 +1,7 @@
+blog-title:
+  short: "My Blog"
+  long: "Mark Daemon's Blog v0.0.1"
+  terminal: "MD"
+sections: ["home", "week_notes", "blog", "about"]
+home-section: "home"
+link: "http://localhost:8000"
