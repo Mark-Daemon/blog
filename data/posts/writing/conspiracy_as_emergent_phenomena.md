@@ -1,7 +1,7 @@
 title: Conspiracy as Emergent Phenomena
 date: 2024-12-28
 excerpt: Human Collaboration at Scale without Intelligent Design.
-section: blog
+section: writing 
 ---
 
 ## Human Collaboration at Scale without Intelligent Design
