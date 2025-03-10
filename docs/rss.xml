@@ -1,37 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <title>null</title>
 <link>https://mark-daemon.github.io/blog</link>
+<description>Mark Daemon: Tech, Statistics, Literature, and Politics</description>
+<atom:link href="https://mark-daemon.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/>
 <item>
 <title>week_notes_1</title>
 <link>https://mark-daemon.github.io/blog/week_notes/week_notes_1.html</link>
 <description>Started learning Clojure, Gradle woes, and the latest on books.</description>
-<pubDate>2025-03-09</pubDate>
+<pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/week_notes/week_notes_1.html</guid>
 </item>
 <item>
 <title>index.md</title>
 <link>https://mark-daemon.github.io/blog/home/index.html</link>
 <description>This is my first post!</description>
-<pubDate>2025-01-01</pubDate>
+<pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/home/index.html</guid>
 </item>
 <item>
 <title>index.md</title>
 <link>https://mark-daemon.github.io/blog/about/index.html</link>
 <description>This is my first post!</description>
-<pubDate>2025-01-01</pubDate>
+<pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/about/index.html</guid>
 </item>
 <item>
 <title>Conspiracy as Emergent Phenomena</title>
 <link>https://mark-daemon.github.io/blog/writing/conspiracy_as_emergent_phenomena.html</link>
 <description>Human Collaboration at Scale without Intelligent Design.</description>
-<pubDate>2024-12-28</pubDate>
+<pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/writing/conspiracy_as_emergent_phenomena.html</guid>
 </item>
 <item>
 <title>Toiling Elsewhere</title>
 <link>https://mark-daemon.github.io/blog/writing/toiling_elsewhere.html</link>
 <description>A short story of ambition and introspection under artificial lights.</description>
-<pubDate>2024-12-08</pubDate>
+<pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/writing/toiling_elsewhere.html</guid>
 </item>
 </channel>
 </rss>
