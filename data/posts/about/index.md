@@ -6,6 +6,6 @@ section: about
 
 It renders the json onto the screen or else it gets the hose again.
 
-#### Links:
+**Links**:
 - [Site Source Code](https://github.com/Mark-Daemon/blog)
 - [RSS](/blog/rss.xml)

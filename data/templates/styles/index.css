@@ -131,6 +131,14 @@ a:active {
     font-size: 1.25em;
 }
 
+.blog-content ul li {
+    margin-bottom: 0.5em;
+}
+
+.blog-content ul li:last-child {
+    margin-bottom: 0;
+}
+
 .blog-content a {
     color: #0fF8AA;
     text-decoration: underline;
