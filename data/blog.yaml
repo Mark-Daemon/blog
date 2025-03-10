@@ -2,6 +2,6 @@ blog-title:
   short: "My Blog"
   long: "Mark Daemon's Blog v0.0.1"
   terminal: "MD"
-sections: ["home", "week_notes", "blog", "about"]
+sections: ["home", "week_notes", "writing", "about"]
 home-section: "home"
-link: "http://localhost:8000"
+link: "https://mark-daemon.github.io/blog"

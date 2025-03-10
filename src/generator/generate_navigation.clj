@@ -1,7 +1,8 @@
 (ns generator.generate_navigation
   (:require [generator.model :as model]
             [clojure.spec.alpha :as s]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [generator.util :as util]))
 
 (defn- generate-navigation-item
   "Generates a navigation item from the section data"
@@ -13,8 +14,8 @@
   "Creates a section link path from the section data"
   [home-section section]
   (if (= home-section section)
-    (str "/index.html")
-    (str "/" section "/index.html")))
+    (str util/blog-path "index.html")
+    (str util/blog-path section "/index.html")))
 
 (defn- generate-navigation-content
   "Generates the navigation bar content from the blog data"

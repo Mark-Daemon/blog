@@ -2,9 +2,7 @@
   (:require [generator.model :as model]
             [clojure.spec.alpha :as s]
             [clojure.string :as str]
-            [generator.util :as util])
-  (:import (java.text SimpleDateFormat)
-           (java.util TimeZone)))
+            [generator.util :as util]))
 
 (defn- generate-post-rows
   "Generates a post row from the post data"
@@ -13,7 +11,7 @@
   (let [{:keys [title date meta excerpt section file-name]} (:post-data post-data)
         formatter (util/create-date-formatter)
         formatted-date (.format formatter date)
-        link (str "/" section "/" (str/replace file-name ".md" ".html"))]
+        link (str util/blog-path section "/" (str/replace file-name ".md" ".html"))]
     (-> file-template
         (str/replace "{{ post.link }}" link)
         (str/replace "{{ post.title }}" (str/upper-case title))
