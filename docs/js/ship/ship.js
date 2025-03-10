@@ -93,7 +93,7 @@ class NostremoShip {
             // If not in cache, load from file
             const loader = new GLTFLoader();
             loader.load(
-                '/js/ship/scene.gltf',
+                '/blog/js/ship/scene.gltf',
                 (gltf) => {
                     // Create container for wireframe model
                     const container = new THREE.Group();
