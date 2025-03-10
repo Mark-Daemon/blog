@@ -1,7 +1,7 @@
 title: Toiling Elsewhere
 date: 2024-12-08
 excerpt: A short story of ambition and introspection under artificial lights.
-section: blog
+section: writing 
 ---
 Sterile off-white lamps illuminate two faceless figures in white full-body gear.
 Only their eyes are visible behind the two view-ports of their filtered masks.
