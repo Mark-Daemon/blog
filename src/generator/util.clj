@@ -4,7 +4,8 @@
   (:import (java.text SimpleDateFormat)
            (java.util TimeZone)))
 
-(def publish-folder "docs/")
+(def publish-folder "docs/blog/")
+(def blog-path "/blog/")
 (def landing-recent-posts-count 3)
 
 (defn- escape-special-chars
