@@ -1,5 +1,5 @@
 blog-title:
-  short: "My Blog"
+  short: "MD Blog"
   long: "Mark Daemon's Blog v0.0.1"
   terminal: "MD"
 sections: ["home", "week_notes", "writing", "about"]
