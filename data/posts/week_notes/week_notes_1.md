@@ -11,11 +11,12 @@ performance:
 ## Work
 
 Learnt an interesting Gradle lesson this week. While configuring an Android 
-project to generate a lock-file for SAST integration I was getting OOM errors. 
+project to generate a lock-file for SAST integration I was getting OOM errors.  
 The gradle build is broken into three processes: the gradle wrapper, 
 the gradle daemon and the kotlin daemon. The wrapper typically has a 
 small amount of memory assigned, and tasks involving large logging outputs
-can crash it. In those cases pass the `-q` flag to disable the wrappers 
+can crash it.  
+In those cases pass the `-q` flag to disable the wrappers 
 logging to resolve your OOM woes.
 
 I've continued to work on volunteer projects with [REDACTED], but have struggled a bit with the 
