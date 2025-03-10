@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/scanner.css">
+    <link rel="stylesheet" href="/styles/ship.css">
+    <script async src="https://unpkg.com/es-module-shims/dist/es-module-shims.js"></script>
+    <script src="/js/imports.js"></script>
+    <title>My Blog</title>
+</head>
+<body>
+    <div class="terminal">
+        <div class="scan-line"></div>
+        <div class="header">
+            <div class="header-text">
+                NSTRM0://MD/BLOG<span class="blink">_</span>
+                <br>
+                Mark Daemon's Blog v0.0.1
+            </div>
+            <div>
+                <div class="ship-and-scanner">
+                    <div class="ship-container">
+                        <canvas id="shipCanvas"></canvas>
+                    </div>
+                    <div class="scanner-container">
+                        <canvas id="scannerCanvas"></canvas>
+                    </div>
+                </div>
+                <div class="scanner-text">
+                    XENOFORM DETECTION ACTIVE
+                    <br>
+                    ENTITIES: 3
+                </div>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <a href="/index.html"><div class="nav-item">> HOME</div></a><a href="/week_notes/index.html"><div class="nav-item">> WEEK_NOTES</div></a><a href="/blog/index.html"><div class="nav-item">> BLOG</div></a><a href="/about/index.html"><div class="nav-item">> ABOUT</div></a>
+        </div>
+
+        
+
+        <div class="status"><span>MD PAGES LOADED</span><span>ENTRIES: 2</span></div>
+
+       <a href="/blog/conspracy_as_emergent_phenomena.html">
+    <div class="blog-post">
+        <div class="post-title">CONSPIRACY AS EMERGENT PHENOMENA</div>
+        <div class="post-meta">
+             2024-12-28
+        </div>
+        <div class="post-excerpt">
+            Human Collaboration at Scale without Intelligent Design.
+        </div>
+    </div>
+</a><a href="/blog/toiling_elsewhere.html">
+    <div class="blog-post">
+        <div class="post-title">TOILING ELSEWHERE</div>
+        <div class="post-meta">
+             2024-12-08
+        </div>
+        <div class="post-excerpt">
+            A short story of ambition and introspection under artificial lights.
+        </div>
+    </div>
+</a>
+
+
+        <div class="data-block">
+            SYSTEM STATUS: 
+            <br>
+            - XENODATA INTEGRITY: 99.7%
+            <br>
+            - TRANSLATION MATRIX: ACTIVE
+            <br>
+            - QUANTUM ENCRYPTION: ENABLED
+            <br>
+            - AWAITING NEURAL INTERFACE<span class="blink">_</span>
+        </div>
+    </div>
+    <script type="module" src="/js/typing_effect.js"></script>
+    <script type="module" src="/js/ship/ship.js"></script>
+    <script type="module" src="/js/scanner/scanner.js"></script>
+</body>
+</html>
