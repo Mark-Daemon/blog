@@ -59,9 +59,10 @@
         index-path (str section-path "index.html")]
     (io/make-parents (io/file index-path))
     (spit index-path (templater/eval-template index-template blog section section-index))
-    (doseq [post section-posts]
-      (spit (str section-path "/" (str/replace (:file-name post) ".md" ".html"))
-            (templater/eval-template post-template blog section post)))))
+    (if (not (:is-home section))
+      (doseq [post section-posts]
+        (spit (str section-path "/" (str/replace (:file-name post) ".md" ".html"))
+              (templater/eval-template post-template blog section post))))))
 
 (defn generate-site
   "Generates the complete site from templates and data"
