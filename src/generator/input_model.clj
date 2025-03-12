@@ -1,4 +1,4 @@
-(ns generator.model
+(ns generator.input_model
   (:require [clojure.spec.alpha :as s]))
 
 ;; Basic specs for fields
@@ -9,26 +9,16 @@
 (s/def ::excerpt string?)
 (s/def ::file-name string?)
 
-;; Perf report specs
-(s/def ::mental number?)
-(s/def ::physical number?)
-(s/def ::productivity number?)
-(s/def ::perf-report (s/keys :req-un [::mental ::physical ::productivity]))
-
 ;; Post specs
-(s/def ::post-data (s/keys :req-un [::title ::date ::section ::excerpt ::file-name]
-                           :opt-un [::meta ::perf-report]))
-(s/def ::post (s/keys :req-un [::post-data ::content]))
+(s/def ::post (s/keys :req-un [::title ::date ::section ::excerpt ::file-name ::content]
+                      :opt-un [::meta]))
 (s/def ::posts (s/coll-of ::post))
-
-(defrecord Post [post-data content])
-
+(defrecord Post [title date section excerpt file-name content])
 (defn create-post
   "Creates a post record from post data and content"
-  [post-data content]
-  {:pre [(s/valid? ::post-data post-data)
-         (s/valid? ::content content)]}
-  (->Post post-data content))
+  [post]
+  {:pre [(s/valid? ::post post)]}
+  (map->Post post))
 
 
 ;; Blog specs
@@ -39,9 +29,7 @@
 (s/def ::blog-title (s/keys :req-un [::short ::long ::terminal]))
 (s/def ::sections (s/coll-of ::section))
 (s/def ::blog (s/keys :req-un [::blog-title ::sections ::home-section]))
-
 (defrecord Blog [blog-title])
-
 (defn create-blog
   "Creates a blog record from title and date"
  ([blog-data]

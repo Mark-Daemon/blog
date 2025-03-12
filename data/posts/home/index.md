@@ -1,7 +1,7 @@
-title: index.md
+title: index
 date: 2025-01-01
 excerpt: This is my first post!
-section: home  
+section: home
 ---
 Welcome! This is where I practice writing. 
 
