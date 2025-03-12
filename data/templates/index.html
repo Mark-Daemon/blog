@@ -43,7 +43,7 @@
 
         {%
             (if (not (zero? (count (:posts section))))
-                "<div class=\"status\"><span>{{ (:terminal-title blog) }} PAGES LOADED</span><span>ENTRIES: {{ (count (:posts section)) }}</span></div>"
+                "<div class=\"status\"><span>{{ (if (:is-home section) \"LATEST\" (:terminal-title blog)) }} PAGES LOADED</span><span>ENTRIES: {{ (count (:posts section)) }}</span></div>"
             )
 
         %}
