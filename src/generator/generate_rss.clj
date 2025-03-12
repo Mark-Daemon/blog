@@ -1,6 +1,6 @@
 (ns generator.generate_rss
   (:require [clojure.string :as str]
-            [generator.model :as model]
+            [generator.input_model :as model]
             [clojure.spec.alpha :as s]
             [generator.util :as util]))
 
@@ -37,19 +37,19 @@
   (let [str-builder (StringBuilder.)]
     (.append str-builder "<item>\n")
     (.append str-builder "<title>")
-    (.append str-builder (:title (:post-data post-data)))
+    (.append str-builder (:title post-data))
     (.append str-builder "</title>\n")
     (.append str-builder "<link>")
-    (.append str-builder (str base-url "/" (:section (:post-data post-data)) "/" (str/replace (:file-name (:post-data post-data)) ".md" ".html")))
+    (.append str-builder (str base-url "/" (:section post-data) "/" (str/replace (:file-name post-data) ".md" ".html")))
     (.append str-builder "</link>\n")
     (.append str-builder "<description>")
-    (.append str-builder (:excerpt (:post-data post-data)))
+    (.append str-builder (:excerpt post-data))
     (.append str-builder "</description>\n")
     (.append str-builder "<pubDate>")
-    (.append str-builder (.format date-formatter (:date (:post-data post-data))))
+    (.append str-builder (.format date-formatter (:date post-data)))
     (.append str-builder "</pubDate>\n")
     (.append str-builder "<guid isPermaLink=\"true\">")
-    (.append str-builder (str base-url "/" (:section (:post-data post-data)) "/" (str/replace (:file-name (:post-data post-data)) ".md" ".html")))
+    (.append str-builder (str base-url "/" (:section post-data) "/" (str/replace (:file-name post-data) ".md" ".html")))
     (.append str-builder "</guid>\n")
     (.append str-builder "</item>\n")
     (.toString str-builder)))

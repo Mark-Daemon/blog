@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="/blog/styles/ship.css">
     <script async src="https://unpkg.com/es-module-shims/dist/es-module-shims.js"></script>
     <script src="/blog/js/imports.js"></script>
-    <title>{{ title.short }}</title>
+    <title>{{ (:short-title blog) }}</title>
 </head>
 <body>
 <div class="terminal">
     <div class="scan-line"></div>
     <div class="header">
         <div class="header-text">
-            NSTRM0://{{ title.terminal }}/{{ header-path }}<span class="blink">_</span>
+            NSTRM0://{{ (:terminal-title blog) }}/{{ (str/upper-case (:title section)) }}<span class="blink">_</span>
             <br>
-            {{ title.long }}
+            {{ (:long-title blog) }}
         </div>
         <div>
             <div class="ship-and-scanner">
@@ -37,13 +37,11 @@
         </div>
     </div>
 
-    <div class="navigation">
-        {{ navigation }}
-    </div>
+    {{ (apply-section "data/templates/navigation.html") }}
 
-    {{ section.post }}
+    {{ (apply-section "data/templates/post-content.html") }}
 
-    {{ performance }}
+    {{ (apply-section "data/templates/performance-report.html") }}
 
     <div class="data-block">
         SYSTEM STATUS:

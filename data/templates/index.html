@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="/blog/styles/ship.css">
     <script async src="https://unpkg.com/es-module-shims/dist/es-module-shims.js"></script>
     <script src="/blog/js/imports.js"></script>
-    <title>{{ title.short }}</title>
+    <title>{{ (:short-title blog) }}</title>
 </head>
 <body>
     <div class="terminal">
         <div class="scan-line"></div>
         <div class="header">
             <div class="header-text">
-                NSTRM0://{{ title.terminal }}/{{ header-path }}<span class="blink">_</span>
+                NSTRM0://{{ (:terminal-title blog) }}/{{ (str/upper-case (:title section)) }}<span class="blink">_</span>
                 <br>
-                {{ title.long }}
+                {{ (:long-title blog) }}
             </div>
             <div>
                 <div class="ship-and-scanner">
@@ -36,21 +36,29 @@
                 </div>
             </div>
         </div>
-        
-        <div class="navigation">
-            {{ navigation }}
-        </div>
 
-        {{ section.post }}
+        {{ (apply-section "data/templates/navigation.html") }}
 
-        <div class="status"><span>{{ title.terminal }} PAGES LOADED</span><span>ENTRIES: {{ posts.count }}</span></div>
+       {{ (if (not (nil? (:section-post section))) (apply-section-with-post "data/templates/post-content.html" (:section-post section))) }}
 
-       {{ posts }}
+        {%
+            (if (not (zero? (count (:posts section))))
+                "<div class=\"status\"><span>{{ (:terminal-title blog) }} PAGES LOADED</span><span>ENTRIES: {{ (count (:posts section)) }}</span></div>"
+            )
 
-        {{ performance }}
+        %}
+        {{ (apply-section "data/templates/post-list.html") }}
+
+        {%
+        (do
+            (if (:is-home section)
+                (let [latest-performance (first (filter #(not (nil? (:performance (:extra %)))) (:posts section)))]
+                    (if (not (nil? latest-performance))
+                        (apply-section-with-post "data/templates/performance-report.html" latest-performance)))))
+        %}
 
         <div class="data-block">
-            SYSTEM STATUS: 
+            SYSTEM STATUS:
             <br>
             - XENODATA INTEGRITY: 99.7%
             <br>

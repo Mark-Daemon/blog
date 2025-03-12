@@ -1,7 +1,7 @@
 <div class="blog-content">
-    <div class="post-content-title"> <div class="typing-effect">{{ post.title }}</div></div>
-    <div class="post-meta">{{ post.meta }}</div>
+    <div class="post-content-title"> <div class="typing-effect">{{ (str/upper-case (if (:is-section-index post) (:section-name post) (:title post))) }}</div></div>
+    <div class="post-meta">{{ (:meta post) }}</div>
     <div class="post-excerpt">
-        {{ post.content }}
+        {{ (:content post) }}
     </div>
 </div>
