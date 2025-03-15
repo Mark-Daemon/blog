@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="/blog/styles/index.css">
     <link rel="stylesheet" href="/blog/styles/scanner.css">
     <link rel="stylesheet" href="/blog/styles/ship.css">
-    <script async src="https://unpkg.com/es-module-shims/dist/es-module-shims.js"></script>
     <script src="/blog/js/imports.js"></script>
     <title>{{ (:short-title blog) }}</title>
 </head>
@@ -43,7 +42,8 @@
 
         {%
             (if (not (zero? (count (:posts section))))
-                "<div class=\"status\"><span>{{ (if (:is-home section) \"LATEST\" (:terminal-title blog)) }} PAGES LOADED</span><span>ENTRIES: {{ (count (:posts section)) }}</span></div>"
+                (str "<div class=\"status\"><span>{{ (if (:is-home section) \"LATEST\" (:terminal-title blog)) }} PAGES LOADED</span>"
+                "<span>ENTRIES: {{ (if (:is-home section) "3" (count (:posts section))) }}</span></div>")
             )
 
         %}
