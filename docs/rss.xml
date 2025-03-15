@@ -6,6 +6,13 @@
 <description>Mark Daemon: Tech, Statistics, Literature, and Politics</description>
 <atom:link href="https://mark-daemon.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/>
 <item>
+<title>week_notes_2</title>
+<link>https://mark-daemon.github.io/blog/week_notes/week_notes_2.html</link>
+<description>Clojure, irrationality and the latest on books.</description>
+<pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/week_notes/week_notes_2.html</guid>
+</item>
+<item>
 <title>week_notes_1</title>
 <link>https://mark-daemon.github.io/blog/week_notes/week_notes_1.html</link>
 <description>Started learning Clojure, Gradle woes, and the latest on books.</description>
