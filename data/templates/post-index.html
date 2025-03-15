@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="terminal">
-    <div class="scan-line"></div>
+    <div class="scan-line" style="--target-value: {{ (if (not (nil? (:scan-time (:extra post)))) (:scan-time (:extra post)) "12s") }}"></div>
     <div class="header">
         <div class="header-text">
             NSTRM0://{{ (:terminal-title blog) }}/{{ (str/upper-case (:title section)) }}<span class="blink">_</span>

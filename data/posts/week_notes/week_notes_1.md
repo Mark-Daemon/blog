@@ -2,6 +2,7 @@ title: week_notes_1
 date: 2025-03-09
 excerpt: Started learning Clojure, Gradle woes, and the latest on books.
 section: week_notes
+scan-time: 20s
 performance:
     mental: 62
     physical: 54
