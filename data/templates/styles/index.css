@@ -62,7 +62,7 @@ body {
     right: 0;
     height: 2px;
     background: rgba(0, 255, 170, 0.1);
-    animation: scan 12s linear infinite 1s;
+    animation: scan var(--target-value) linear infinite 1s;
     box-shadow: 0 0 5px rgba(0, 255, 170, 0.3);
 }
 

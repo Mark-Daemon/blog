@@ -2,6 +2,7 @@ title: week_notes_2
 date: 2025-03-16
 excerpt: Clojure, irrationality and the latest on books.
 section: week_notes
+scan-time: 20s
 performance:
     mental: 68
     physical: 52

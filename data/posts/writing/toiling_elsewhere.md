@@ -1,6 +1,7 @@
 title: Toiling Elsewhere
 date: 2024-12-08
 excerpt: A short story of ambition and introspection under artificial lights.
+scan-time: 20s
 section: writing 
 ---
 Sterile off-white lamps illuminate two faceless figures in white full-body gear.
