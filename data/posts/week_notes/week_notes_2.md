@@ -42,8 +42,8 @@ kill the currently running pod. Not quite where I want it to be.
 A very amusing book. 
 A case-study in self-destruction and resentment, with a social critique that anticipates the 
 coming Soviet era.  
-The narrator makes for a pitiful character, both soothed and tormented by his 
-fanaticism and self-grandeur that inevitably collides with reality. He parodies the timeless
+The narrator makes for a pitiful character, both soothed and tormented by his
+fantasies and self-grandeur that inevitably collides with reality. He parodies the timeless
 "intellectual" and "morally righteous" arch-typical personality for a good laugh.
 There were moments I came to relate with his antics, a throwback to my younger years, both to my horror
 and amusement.
