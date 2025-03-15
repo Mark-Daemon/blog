@@ -24,15 +24,19 @@
 
 (defn- eval-expression
   [expr blog section post]
-  (let [code (read-string expr)
-        eval-expr `(let [~'blog ~blog
-                         ~'section ~section
-                         ~'post ~post
-                         ~'format-date (fn [date#] (format-date date#))
-                         ~'apply-section (fn [path#] (slurp path#))
-                         ~'apply-section-with-post (fn [path# post#] (eval-template (slurp path#) ~blog ~section post#))]
-                     ~code)]
-    (eval eval-expr)))
+  (try (let [code (read-string expr)
+             eval-expr `(let [~'blog ~blog
+                              ~'section ~section
+                              ~'post ~post
+                              ~'format-date (fn [date#] (format-date date#))
+                              ~'apply-section (fn [path#] (slurp path#))
+                              ~'apply-section-with-post (fn [path# post#] (eval-template (slurp path#) ~blog ~section post#))]
+                          ~code)]
+         (eval eval-expr))
+       (catch Exception e
+         (println "Error evaluating expression" expr)
+         (println (.getMessage e))
+         (throw e))))
 
 (defn eval-template
   "Evluates the template with the given post context"

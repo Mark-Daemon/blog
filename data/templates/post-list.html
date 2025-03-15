@@ -18,6 +18,7 @@
         )
     )
 
-    (reduce str "" (map create-post-row (take 5 (:posts section))))
+    (let [to-display (if (:is-home section) (take 3 (:posts section)) (:posts section))]
+        (reduce str "" (map create-post-row to-display)))
 )
 %}
