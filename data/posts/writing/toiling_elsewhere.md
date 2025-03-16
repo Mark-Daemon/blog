@@ -50,7 +50,7 @@ somehow afford better machinery. It's too much, and I find myself thinking...".
 "Of our nice, comfortable paycheck?", Harry interrupts with a light chuckle, "hell, that wife
 of yours may want children soon; that'll give you some novelty". The two men exchange a laugh,
 each feeling the weight of their plastic uniform under the synthetic heat. The smile relieves
-some tension from Sam's eyes, though they remain forecast.  
+some tension from Sam's eyes, though they remain overcast.  
 "That does worry me. They say having children is the end of a man. You can climb that social
 ladder, but not much further once children are in the picture".  
 "Children are a commitment", Harry replies, his tone more mellowed and serious, beginning to
