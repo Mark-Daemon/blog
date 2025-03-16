@@ -43,7 +43,7 @@ is remarkably prescient regarding Europe's trajectory.
 It's taken me a month to complete as I would frequently stop to think about various passages.
 LLMs make for a good reading companion for this - like having someone on-demand to go
 over arguments or interpretations with.  
-I read Kaufmann's transaction, which is very legible, but his footnotes haven't always aged
+I read Kaufmann's translation, which is very legible, but his footnotes haven't always aged
 well. At one point he compares Nietzsche's observation on inherited behaviour to "Lamarckism",
 seemingly to discredit Nietzsche's argument. However, we today know personality traits are 
 heritable (just not Lamarckianly so).
