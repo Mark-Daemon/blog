@@ -9,8 +9,14 @@
 (def date-formatter (util/create-date-formatter))
 
 (defn format-date
+  "Formats the date with the default style - used by the eval"
   [date]
   (.format date-formatter date))
+
+(defn apply-section
+  "Applies the section template to the given path - used by eval"
+  [path]
+  (slurp path))
 
 (defn- find-code-block
   "Finds the first location of a code block {{ ... }} or multi-line {% ... %}."
@@ -28,11 +34,11 @@
              eval-expr `(let [~'blog ~blog
                               ~'section ~section
                               ~'post ~post
-                              ~'format-date (fn [date#] (format-date date#))
-                              ~'apply-section (fn [path#] (slurp path#))
-                              ~'apply-section-with-post (fn [path# post#] (eval-template (slurp path#) ~blog ~section post#))]
+                              ~'apply-section-with-post (fn [path# post#]
+                                                          (eval-template (slurp path#) ~blog ~section post#))]
                           ~code)]
-         (eval eval-expr))
+         (binding [*ns* (find-ns 'generator.templater)]
+           (eval eval-expr)))
        (catch Exception e
          (println "Error evaluating expression" expr)
          (println (.getMessage e))

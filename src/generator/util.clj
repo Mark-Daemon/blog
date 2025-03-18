@@ -1,6 +1,4 @@
 (ns generator.util
-  (:require [clojure.spec.alpha :as s]
-            [clojure.string :as str])
   (:import (java.text SimpleDateFormat)
            (java.util TimeZone)))
 
