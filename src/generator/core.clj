@@ -64,7 +64,7 @@
         (spit (str section-path "/" (str/replace (:file-name post) ".md" ".html"))
               (templater/eval-template post-template blog section post))))))
 
-(defn generate-site
+(defn generate-site!
   "Generates the complete site from templates and data"
   []
   (let [blog-data (model/create-blog (yaml/parse-string (slurp "data/blog.yaml")))
@@ -85,7 +85,7 @@
   []
   (try
     (println "Regenerating site...")
-    (generate-site)
+    (generate-site!)
     (println "Site regenerated.")
     (catch Exception e
       (println "Error generating site:")
@@ -94,4 +94,4 @@
 (defn -main
   "Generate blog from templates and yaml data"
   [& args]
-  (generate-site))
+  (generate-site!))
