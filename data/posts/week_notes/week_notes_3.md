@@ -64,7 +64,7 @@ would lead to higher costs for food, as the demand for food would lead to the cu
 with Malthusianism). His involvement in the Corn Laws is also interesting - but back to Comparative Advantage.  
 Regarding Comparative Advantage, Ricardo stipulates certain conditions. A major one being that capital is immobile, as
 otherwise this would lead to offshoring (prescient). During the Corn Law debates he also argued that not placing
-tariffs on foreign corn would lead to winners (consumers vs producers), and as such a gradual transition would be 
+tariffs on foreign corn would lead to winners and losers (consumers vs producers), and as such a gradual transition would be 
 preferable. However, I was surprised to not find any mention of potential geopolitical risks.
 
 One of the book's authors, Tyler Cowen, similarly finds Comparative Advantage to be somewhat lacking (see 
