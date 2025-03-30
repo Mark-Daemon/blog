@@ -1,5 +1,5 @@
 title: week_notes_4
-date: 2025-03-31
+date: 2025-03-30
 excerpt: Site Reliability, Impro, and future projects.
 section: week_notes
 scan-time: 20s
@@ -50,7 +50,7 @@ finished it. I recommend the game, but you may want to wait for a sale.
 
 ## Personal
 
-I have been struggling with tired eyes lately. I attribute this to spending too much time staring at a screen. 
+I have been struggling with eye strain lately. I attribute this to spending too much time staring at a screen. 
 The books I've been reading lately are textbooks, which are more easily read on a tablet than an e-reader, 
 which hasn't helped. I've started looking into some podcasts that I can listen to instead.
 
