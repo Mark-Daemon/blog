@@ -43,10 +43,12 @@ more seriously, I can see the notes I took being useful.
 
 #### Atomfall
 
-The game was pitched to me as being more Metro than Fallout, which caught my attention. 
-The game has lived up to the pitch. It's not the most challenging game, but the environment 
-and plot are worth exploring. It seems relatively short. I'm about 6 hours in and have almost 
-finished it. I recommend the game, but you may want to wait for a sale.
+The game was pitched to me as being more Metro than Fallout, which caught my attention.
+The game has lived up to the pitch. It's not the most challenging game, but the environment
+and plot are worth exploring - this is where the game shines. The game is short, and
+the ending is rather unsatisfying relative to the strength of the hook, the progression of the plot, and the
+picturesque world. I am hoping they address this in the DLC. Still, I also struggle to see how they can provide 
+a satisfying answer to the left-over questions. I recommend the game, but you may want to wait for a sale.
 
 ## Personal
 
@@ -60,7 +62,7 @@ language to use for a bridge. Kotlin's native compilation target should allow be
 For example, it should be possible to implement custom samplers for Stan in Kotlin. Perhaps a project to pick up?
 
 I enjoy the music selection in Caribbean Rhythms. However, it would be tedious to find every single 
-track used, so I wrote a quick script to identify them for me. This was done in two steps: use the 
+track used, so I wrote a quick script to identify them for me. This was done in main two steps: use the 
 Essentia audio models to find and extract music segments from each episode, then use ShazamIO to find 
 the artist and album for each segment. The results are not perfect, but I am not too fussed.  
-I'll publish the resulting list of music next week.
+You can find the list [here](/blog/writing/caribbean_rhythms_music.html).
