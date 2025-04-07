@@ -4,9 +4,9 @@ excerpt: 3d Printing and preparing for a week off.
 section: week_notes
 scan-time: 20s
 performance:
-mental: 72
-physical: 65
-productivity: 58
+    mental: 72
+    physical: 65
+    productivity: 58
 ---
 
 ## Work
