@@ -29,13 +29,15 @@
 (defn copy-static-files!
   "Copies static files to the output directory"
   []
-  (doseq [file (filter #(.isFile %) (file-seq (io/file "data/templates")))]
+  (doseq [file (filter #(.isFile %) (file-seq (io/file "data")))]
     (if (or (.contains (.getPath file) "templates/styles")
             (.contains (.getPath file) "templates/js")
-            (.contains (.getName file) "favicon"))
+            (.contains (.getName file) "favicon")
+            (.contains (.getPath file) "image/"))
       (do
-        (let [file-path (.getPath file)
-              target-path (str util/publish-folder (second (str/split file-path #"templates/")))
+        (let [parent_dir (if (.contains (.getPath file) "image/") #"data/" #"templates/")
+              file-path (.getPath file)
+              target-path (str util/publish-folder (second (str/split file-path parent_dir)))
               target-file (io/file target-path)]
           (io/make-parents target-file)
           (io/copy file target-file))))))
