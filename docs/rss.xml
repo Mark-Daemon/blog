@@ -20,6 +20,13 @@
 <guid isPermaLink="true">https://mark-daemon.github.io/blog/week_notes/week_notes_2.html</guid>
 </item>
 <item>
+<title>week_notes_6</title>
+<link>https://mark-daemon.github.io/blog/week_notes/week_notes_6.html</link>
+<description>Algorithmic Learning in a Random World, Nick Land's Exit v Voice, 3D printed art.</description>
+<pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/week_notes/week_notes_6.html</guid>
+</item>
+<item>
 <title>week_notes_1</title>
 <link>https://mark-daemon.github.io/blog/week_notes/week_notes_1.html</link>
 <description>Started learning Clojure, Gradle woes, and the latest on books.</description>
@@ -46,6 +53,13 @@
 <description>This is my first post!</description>
 <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
 <guid isPermaLink="true">https://mark-daemon.github.io/blog/home/index.html</guid>
+</item>
+<item>
+<title>STL Colour Preview Tool</title>
+<link>https://mark-daemon.github.io/blog/tools/stl_colour_preview.html</link>
+<description>Previewing the colours of a 3d image with custom layer colours.</description>
+<pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/tools/stl_colour_preview.html</guid>
 </item>
 <item>
 <title>index</title>
