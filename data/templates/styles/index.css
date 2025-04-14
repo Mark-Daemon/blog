@@ -240,6 +240,12 @@ a:active {
     max-width: 100%;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -515,5 +521,9 @@ a:active {
     .header-text {
         font-size: 0.9em; /* Slightly reduce font size on mobile */
         line-height: 1.4; /* Improve readability of wrapped text */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack items in a single column */
     }
 }
