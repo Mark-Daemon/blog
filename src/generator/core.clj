@@ -22,8 +22,8 @@
   "Collects all post data and content and returns it as a list of data objects"
   []
   {:post [(s/valid? ::model/posts %)]}
-  (let [post-files (file-seq (io/file "data/posts"))
-        post-data (map process-post-data (filter #(.isFile %) post-files))]
+  (let [post-files (filter #(str/ends-with? (.getName %) ".md") (file-seq (io/file "data/posts")))
+        post-data (map process-post-data post-files)]
     post-data))
 
 (defn copy-static-files!
@@ -33,9 +33,13 @@
     (if (or (.contains (.getPath file) "templates/styles")
             (.contains (.getPath file) "templates/js")
             (.contains (.getName file) "favicon")
-            (.contains (.getPath file) "image/"))
+            (.contains (.getPath file) "image/")
+            (and (.contains (.getPath file) "posts/") (str/ends-with? (.getName file) ".html")))
       (do
-        (let [parent_dir (if (.contains (.getPath file) "image/") #"data/" #"templates/")
+        (let [parent_dir (cond
+                           (.contains (.getPath file) "posts/") #"posts/"
+                           (.contains (.getPath file) "image/") #"data/"
+                            :else #"templates/")
               file-path (.getPath file)
               target-path (str util/publish-folder (second (str/split file-path parent_dir)))
               target-file (io/file target-path)]
