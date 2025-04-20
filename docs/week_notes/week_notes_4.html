@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/blog/favicon.svg">
+    <link rel="stylesheet" href="/blog/styles/index.css">
+    <link rel="stylesheet" href="/blog/styles/scanner.css">
+    <link rel="stylesheet" href="/blog/styles/ship.css">
+    <script async src="https://unpkg.com/es-module-shims/dist/es-module-shims.js"></script>
+    <script src="/blog/js/imports.js"></script>
+    <title>week_notes_4</title>
+</head>
+<body>
+<div class="terminal">
+    <div class="scan-line" style="--target-value: 20s"></div>
+    <div class="header">
+        <div class="header-text">
+            NSTRM0://MD/WEEK_NOTES<span class="blink">_</span>
+            <br>
+            Mark Daemon's Blog v0.0.2
+        </div>
+        <div>
+            <div class="ship-and-scanner">
+                <div class="ship-container">
+                    <canvas id="shipCanvas"></canvas>
+                </div>
+                <div class="scanner-container">
+                    <canvas id="scannerCanvas"></canvas>
+                </div>
+            </div>
+            <div class="scanner-text">
+                XENOFORM DETECTION ACTIVE
+                <br>
+                ENTITIES: 3
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+    <a href="https://mark-daemon.github.io/blog/index.html"><div class="nav-item">> HOME</div></a>
+<a href="https://mark-daemon.github.io/blog/week_notes/index.html"><div class="nav-item">> WEEK_NOTES</div></a>
+<a href="https://mark-daemon.github.io/blog/writing/index.html"><div class="nav-item">> WRITING</div></a>
+<a href="https://mark-daemon.github.io/blog/tools/index.html"><div class="nav-item">> TOOLS</div></a>
+<a href="https://mark-daemon.github.io/blog/about/index.html"><div class="nav-item">> ABOUT</div></a>
+
+</div>
+
+
+    <div class="blog-content">
+    <div class="post-content-title"> <div class="typing-effect">WEEK_NOTES_4</div></div>
+    <div class="post-meta">2025-03-30 </div>
+    <div class="post-excerpt">
+        <h2>Work</h2><p>I read an interesting case in the book Google's Site Reliability Engineering some years ago. They had reduced the availability of a storage/caching mechanism with planned outages so developers would not over-rely on it. The logic was that if they were to provide a too-high availability, developers would treat it as if it were always available. At the time, I didn't fully appreciate why you would purposefully degrade your system performance. I have now learnt this lesson.<br /> We have been addressing a caching system that has become too expensive. We had the foresight to design the library that accesses the cache to require a network fallback, so we were confident we could drop the cache for some users to better maximise the benefit/cost ratio. However, in practice, a client team extracted the mechanism to only read from the cache. They have been building features without a network fallback for several years now. To make matters worse, they modified the cache response to contain fields not present in their matching network request. Given this high coupling with the cache, the project to reduce cache reliance is now too expensive for us to pick up (due to opportunity costs).<br /> While explaining this problem to the responsible team, they kept telling me: "You don't need to do this; the cache is always available."</p><h2>Media</h2><h4>Impro by Keith Johnstone</h4><p>I picked this up for a change of pace. It had been pitched to me as explaining social exchanges to the autistic (no comment). The most interesting part of the book revolved around "status transactions". This explores how to present oneself as low or high status, from body posture to speaking mannerisms and "taking up space". One interesting observation was keeping one's head still relative to more exaggerated head movements when speaking. The actors shifting "status", how it may change on short notice, adds drama or comedy to the scene. I was not the target audience for the rest of the book. However, I still found the observations useful, from how actors can build a scene without a fixed script to how masks influence the actors' performance. Should I one day explore writing fiction more seriously, I can see the notes I took being useful.</p><h4>Atomfall</h4><p>The game was pitched to me as being more Metro than Fallout, which caught my attention. The game has lived up to the pitch. It's not the most challenging game, but the environment and plot are worth exploring - this is where the game shines. The game is short, and the ending is rather unsatisfying relative to the strength of the hook, the progression of the plot, and the picturesque world. I am hoping they address this in the DLC. Still, I also struggle to see how they can answer the left-over questions satisfactorily. I recommend the game, but you may want to wait for a sale.</p><h2>Personal</h2><p>I have been struggling with eye strain lately. I attribute this to spending too much time staring at a screen. The books I've been reading lately are textbooks, which are more easily read on a tablet than an e-reader, which hasn't helped. I've started looking into some podcasts that I can listen to instead.</p><p>I've been looking into the Stan data analysis library. It has multiple bridges into other languages, mainly Python and R. Given its implementation in C++, I've been wondering if Kotlin would be a better language to use for a bridge. Kotlin's native compilation target should allow better interop. For example, it should be possible to implement custom samplers for Stan in Kotlin. I will find some time to dig into this further.</p><p>I enjoy the music selection in Caribbean Rhythms. However, it would be tedious to find every single track used, so I wrote a quick script to identify them for me. This was done in two main steps: use the Essentia audio models are used to find and extract music segments from each episode, and ShazamIO is used to find the artist and album for each segment. The results are not perfect, but I am not too fussed.<br /> You can find the list <a href='/blog/writing/caribbean_rhythms_music.html'>here</a>.</p>
+    </div>
+</div>
+
+    <div class="performance-metrics">
+    <div class="metrics-header">
+        RUNCITER ASSOCIATES
+        <div class="subheader">EMPLOYEE PERFORMANCE REPORT</div>
+        <div class="report-meta">
+            <span>SAFEGUARDING YOUR REALITY™</span>
+            <span class="report-id">2025-03-30 - WY-RPT-#45172</span>
+        </div>
+    </div>
+    <div class="metrics-container">
+        <div class="metric-item">
+            <div class="metric-label">MENTAL ACUITY</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: 41%">
+                    <div class="metric-glow"></div>
+                </div>
+                <div class="metric-value">41%</div>
+            </div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-label">PHYSICAL CAPACITY</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: 32%">
+                    <div class="metric-glow"></div>
+                </div>
+                <div class="metric-value">32%</div>
+            </div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-label">PRODUCTIVITY INDEX</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: 48%">
+                    <div class="metric-glow"></div>
+                </div>
+                <div class="metric-value">48%</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="data-block">
+        SYSTEM STATUS:
+        <br>
+        - XENODATA INTEGRITY: 99.7%
+        <br>
+        - TRANSLATION MATRIX: ACTIVE
+        <br>
+        - QUANTUM ENCRYPTION: ENABLED
+        <br>
+        - AWAITING NEURAL INTERFACE<span class="blink">_</span>
+    </div>
+</div>
+<script type="module" src="/blog/js/typing_effect.js"></script>
+<script type="module" src="/blog/js/ship/ship.js"></script>
+<script type="module" src="/blog/js/scanner/scanner.js"></script>
+</body>
+</html>

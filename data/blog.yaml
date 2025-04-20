@@ -4,5 +4,5 @@ blog-title:
   terminal: "MD"
 sections: ["home",  "week_notes", "writing", "tools", "about"]
 home-section: "home"
-link: "http://localhost:8000/blog"
-# link: "https://mark-daemon.github.io/blog"
+#link: "http://localhost:8000/blog"
+link: "https://mark-daemon.github.io/blog"

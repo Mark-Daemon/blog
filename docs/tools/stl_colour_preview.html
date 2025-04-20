@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/blog/favicon.svg">
+    <link rel="stylesheet" href="/blog/styles/index.css">
+    <link rel="stylesheet" href="/blog/styles/scanner.css">
+    <link rel="stylesheet" href="/blog/styles/ship.css">
+    <script async src="https://unpkg.com/es-module-shims/dist/es-module-shims.js"></script>
+    <script src="/blog/js/imports.js"></script>
+    <title>STL Colour Preview Tool</title>
+</head>
+<body>
+<div class="terminal">
+    <div class="scan-line" style="--target-value: 20s"></div>
+    <div class="header">
+        <div class="header-text">
+            NSTRM0://MD/TOOLS<span class="blink">_</span>
+            <br>
+            Mark Daemon's Blog v0.0.2
+        </div>
+        <div>
+            <div class="ship-and-scanner">
+                <div class="ship-container">
+                    <canvas id="shipCanvas"></canvas>
+                </div>
+                <div class="scanner-container">
+                    <canvas id="scannerCanvas"></canvas>
+                </div>
+            </div>
+            <div class="scanner-text">
+                XENOFORM DETECTION ACTIVE
+                <br>
+                ENTITIES: 3
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+    <a href="https://mark-daemon.github.io/blog/index.html"><div class="nav-item">> HOME</div></a>
+<a href="https://mark-daemon.github.io/blog/week_notes/index.html"><div class="nav-item">> WEEK_NOTES</div></a>
+<a href="https://mark-daemon.github.io/blog/writing/index.html"><div class="nav-item">> WRITING</div></a>
+<a href="https://mark-daemon.github.io/blog/tools/index.html"><div class="nav-item">> TOOLS</div></a>
+<a href="https://mark-daemon.github.io/blog/about/index.html"><div class="nav-item">> ABOUT</div></a>
+
+</div>
+
+
+    <div class="blog-content">
+    <div class="post-content-title"> <div class="typing-effect">STL COLOUR PREVIEW TOOL</div></div>
+    <div class="post-meta">2025-04-13 </div>
+    <div class="post-excerpt">
+        <p>Link to the tool <a href='/blog/tools/stl_colour_preview_tool.html'>here</a>.</p><p>The tool assumes you will print with a first layer height of 0.16mm and a general layer height of 0.08mm.<br /> You can adjust the colours applied by layer and how many are used.<br /> The approach works well with an image with a good range of tones or applying a mosaic effect to improve the blending between layers.</p><p>The script runs within your browser. If you wish to edit it, you can download the page source code and serve it locally with <code>python -m http.server</code>.</p><p>I have attached some printed examples below.</p><p><img src="/blog/image/week_notes_6/quiet.jpg" alt="Quiet"  style="width: 250px;"/> <div class="grid-container"> <img src="/blog/image/week_notes_6/deus_ex_red.jpg" alt="Deux Ex Red"  style="height: 220px;"/> <img src="/blog/image/week_notes_6/deus_ex_blue.jpg" alt="Deus Ex Blue"  style="height: 220px;"/> </div></p>
+    </div>
+</div>
+
+    
+
+    <div class="data-block">
+        SYSTEM STATUS:
+        <br>
+        - XENODATA INTEGRITY: 99.7%
+        <br>
+        - TRANSLATION MATRIX: ACTIVE
+        <br>
+        - QUANTUM ENCRYPTION: ENABLED
+        <br>
+        - AWAITING NEURAL INTERFACE<span class="blink">_</span>
+    </div>
+</div>
+<script type="module" src="/blog/js/typing_effect.js"></script>
+<script type="module" src="/blog/js/ship/ship.js"></script>
+<script type="module" src="/blog/js/scanner/scanner.js"></script>
+</body>
+</html>

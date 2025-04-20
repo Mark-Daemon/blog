@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <!-- Background black circle -->
+    <circle cx="16" cy="16" r="16" 
+        fill="#000000"/>
+        
+    <!-- Outer glow -->
+    <circle cx="16" cy="16" r="12" 
+        fill="none" 
+        stroke="#0fF8AA" 
+        stroke-width="2"
+        filter="url(#glow)"/>
+    
+    <!-- Inner circle -->
+    <circle cx="16" cy="16" r="8" 
+        fill="#0fF8AA"/>
+    
+    <!-- Glow filter -->
+    <defs>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+</svg>

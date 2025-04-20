@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>null</title>
+<link>https://mark-daemon.github.io/blog</link>
+<description>Mark Daemon: Tech, Statistics, Literature, and Politics</description>
+<atom:link href="https://mark-daemon.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>week_notes_3</title>
+<link>https://mark-daemon.github.io/blog/week_notes/week_notes_3.html</link>
+<description>Russia, Bayes, and Economics.</description>
+<pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/week_notes/week_notes_3.html</guid>
+</item>
+<item>
+<title>week_notes_2</title>
+<link>https://mark-daemon.github.io/blog/week_notes/week_notes_2.html</link>
+<description>Clojure, irrationality and the latest on books.</description>
+<pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/week_notes/week_notes_2.html</guid>
+</item>
+<item>
+<title>week_notes_6</title>
+<link>https://mark-daemon.github.io/blog/week_notes/week_notes_6.html</link>
+<description>Algorithmic Learning in a Random World, Nick Land's Exit v Voice, 3D printed art.</description>
+<pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/week_notes/week_notes_6.html</guid>
+</item>
+<item>
+<title>week_notes_1</title>
+<link>https://mark-daemon.github.io/blog/week_notes/week_notes_1.html</link>
+<description>Started learning Clojure, Gradle woes, and the latest on books.</description>
+<pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/week_notes/week_notes_1.html</guid>
+</item>
+<item>
+<title>week_notes_5</title>
+<link>https://mark-daemon.github.io/blog/week_notes/week_notes_5.html</link>
+<description>3d Printing and preparing for a week off.</description>
+<pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/week_notes/week_notes_5.html</guid>
+</item>
+<item>
+<title>week_notes_4</title>
+<link>https://mark-daemon.github.io/blog/week_notes/week_notes_4.html</link>
+<description>Site Reliability, Impro, and future projects.</description>
+<pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/week_notes/week_notes_4.html</guid>
+</item>
+<item>
+<title>index</title>
+<link>https://mark-daemon.github.io/blog/home/index.html</link>
+<description>This is my first post!</description>
+<pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/home/index.html</guid>
+</item>
+<item>
+<title>STL Colour Preview Tool</title>
+<link>https://mark-daemon.github.io/blog/tools/stl_colour_preview.html</link>
+<description>Previewing the colours of a 3d image with custom layer colours.</description>
+<pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/tools/stl_colour_preview.html</guid>
+</item>
+<item>
+<title>index</title>
+<link>https://mark-daemon.github.io/blog/about/index.html</link>
+<description>This is my first post!</description>
+<pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/about/index.html</guid>
+</item>
+<item>
+<title>Conspiracy as Emergent Phenomena</title>
+<link>https://mark-daemon.github.io/blog/writing/conspiracy_as_emergent_phenomena.html</link>
+<description>Human Collaboration at Scale without Intelligent Design.</description>
+<pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/writing/conspiracy_as_emergent_phenomena.html</guid>
+</item>
+<item>
+<title>Toiling Elsewhere</title>
+<link>https://mark-daemon.github.io/blog/writing/toiling_elsewhere.html</link>
+<description>A short story of ambition and introspection under artificial lights.</description>
+<pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/writing/toiling_elsewhere.html</guid>
+</item>
+<item>
+<title>The Music of Caribbean Rhythms</title>
+<link>https://mark-daemon.github.io/blog/writing/caribbean_rhythms_music.html</link>
+<description>A list of music used in the Caribbean Rhythms podcast.</description>
+<pubDate>Wed, 02 Apr 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/writing/caribbean_rhythms_music.html</guid>
+</item>
+</channel>
+</rss>

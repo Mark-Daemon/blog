@@ -2,7 +2,7 @@
   (:import (java.text SimpleDateFormat)
            (java.util TimeZone)))
 
-(def publish-folder "docs/blog/")
+(def publish-folder "docs/")
 
 (defn create-date-formatter
   "Create the style of date formatter to be consistently used across the app"
