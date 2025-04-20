@@ -1,0 +1,11 @@
+<div class="navigation">
+    {%
+    (do
+        (defn- create-navigation-item
+            [section]
+            (str "<a href=\"" (:link section) "\"><div class=\"nav-item\">> " (str/upper-case (:title section)) "</div></a>\n"))
+
+        (reduce str "" (map #(create-navigation-item %) (:sections blog)))
+    )
+    %}
+</div>

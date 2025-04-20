@@ -1,0 +1,24 @@
+{%
+
+(do
+    (defn- create-post-row
+        [post]
+        (str
+            "<a href=\"" (:link post) "\">\n"
+            "    <div class=\"blog-post\">\n"
+            "        <div class=\"post-title\">" (str/upper-case (:title post)) "</div>\n"
+            "        <div class=\"post-meta\">\n"
+            "            " (str/upper-case (str (format-date (:date post)) " " (:meta post))) "\n"
+            "        </div>\n"
+            "        <div class=\"post-excerpt\">\n"
+            "            " (:excerpt post) "\n"
+            "        </div>\n"
+            "    </div>\n"
+            "</a>\n"
+        )
+    )
+
+    (let [to-display (if (:is-home section) (take 3 (:posts section)) (:posts section))]
+        (reduce str "" (map create-post-row to-display)))
+)
+%}

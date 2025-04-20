@@ -1,0 +1,529 @@
+body {
+    background-color: #000;
+    color: #0fF8AA; /* More alien green with blue tint */
+    font-family: "Courier New", monospace;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+
+.terminal {
+    border: 2px solid #0fF8AA;
+    padding: 20px;
+    position: relative;
+    height: auto;
+    margin: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 170, 0.2);
+    background: linear-gradient(to bottom, 
+        rgba(0, 10, 8, 0.9) 0%,
+        rgba(0, 5, 4, 0.95) 100%);
+}
+
+.terminal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.terminal::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(
+            to bottom right,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.05) 35%,
+            rgba(0, 0, 0, 0.05) 65%,
+            rgba(0, 0, 0, 0.15) 100%
+        ),
+        linear-gradient(
+            to top left,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.05) 35%,
+            rgba(0, 0, 0, 0.05) 65%,
+            rgba(0, 0, 0, 0.15) 100%
+        );
+    pointer-events: none;
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(0, 255, 170, 0.1);
+    animation: scan var(--target-value) linear infinite 1s;
+    box-shadow: 0 0 5px rgba(0, 255, 170, 0.3);
+}
+
+.header {
+    border-bottom: 1px solid #0fF8AA;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Add alien symbols to header */
+.header::before {
+    content: '⌬ ⌬ ⌬';
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    font-size: 0.8em;
+    opacity: 0.5;
+    letter-spacing: 5px;
+}
+
+.header-text {
+    flex: 1;
+    position: relative;
+    word-wrap: break-word;
+    word-break: break-all;
+    max-width: 100%;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 255, 170, 0.3);
+    padding: 5px 10px;
+    background: rgba(0, 20, 15, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.blink {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.blog-content {
+    border: 1px solid #0fF8AA;
+    padding: 15px;
+    margin: 15px 0;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.25em;
+}
+
+.blog-content ul li {
+    margin-bottom: 0.5em;
+}
+
+.blog-content ul li:last-child {
+    margin-bottom: 0;
+}
+
+.blog-content a {
+    color: #0fF8AA;
+    text-decoration: underline;
+    text-decoration-color: rgba(15, 248, 170, 0.5);
+    transition: all 0.3s ease;
+}
+
+.blog-content a:hover {
+    text-decoration-color: #0fF8AA;
+    text-shadow: 0 0 8px rgba(15, 248, 170, 0.3);
+}
+
+.blog-post {
+    color: #0fF8AA;
+    border: 1px solid #0fF8AA;
+    padding: 15px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+}
+
+.blog-post:hover {
+    background-color: rgba(0, 255, 170, 0.1);
+    transform: translateX(5px);
+}
+
+/* Add alien hover effect */
+.blog-post::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        transparent 0%, 
+        rgba(0, 255, 170, 0.1) 50%, 
+        transparent 100%);
+    opacity: 0;
+}
+
+.blog-post:hover::after {
+    opacity: 1;
+    animation: alien-scan 2s linear infinite;
+}
+
+@keyframes alien-scan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.post-content-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.post-content-title::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+}
+
+.post-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.post-title::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    animation: blink 1s step-end infinite;
+}
+
+.post-meta {
+    font-size: 0.8em;
+    color: #0fF8AA;
+    margin-bottom: 10px;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.post-excerpt {
+    color: #0fF8AA;
+    position: relative;
+    text-decoration: none;
+}
+
+.blog-content .post-excerpt img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #0fF8AA;
+    background: rgba(0, 20, 15, 0.2);
+    position: relative;
+}
+
+.nav-item {
+    cursor: pointer;
+    padding: 5px 10px;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.navigation a {
+    font-size: 1.2em;
+    color: #0fF8AA;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-color: rgba(0, 255, 170, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Add alien hover effect for nav items */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #0fF8AA;
+    transition: width 0.3s;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+@keyframes scan {
+    0%, 25% {
+        top: -5%;
+    }
+    75% {
+        top: 100%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+.typing-effect {
+    color: transparent;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        color: transparent;
+    }
+    100% {
+        color: #0fF8AA;
+    }
+}
+
+.cursor {
+    display: inline-block;
+    font-size: 0.8em;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+    color: #0fF8AA;
+}
+
+.performance-metrics {
+    border: 1px solid #0fF8AA;
+    padding: 15px;
+    margin: 20px 0;
+    background: rgba(0, 20, 15, 0.2);
+    position: relative;
+}
+
+.metrics-header {
+    font-size: 1em;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(15, 248, 170, 0.3);
+}
+
+.metrics-header .subheader {
+    font-size: 0.8em;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+.metrics-header .report-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7em;
+    margin-top: 8px;
+    opacity: 0.7;
+}
+
+.report-meta .report-id {
+    font-family: monospace;
+}
+
+.metrics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.metric-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.metric-label {
+    width: 150px;
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+.metric-bar {
+    flex-grow: 1;
+    height: 20px;
+    background: rgba(15, 248, 170, 0.1);
+    border: 1px solid rgba(15, 248, 170, 0.3);
+    position: relative;
+}
+
+.metric-fill {
+    height: 100%;
+    background: linear-gradient(
+            90deg,
+            rgba(15, 248, 170, 0.2) 0%,
+            rgba(15, 248, 170, 0.4) 100%
+    );
+    position: relative;
+    animation: fillBar 1s ease-out forwards;
+}
+
+.metric-glow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: rgba(15, 248, 170, 0.3);
+    filter: blur(5px);
+    animation: pulse 2s infinite;
+}
+
+.metric-value {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    text-shadow: 0 0 5px rgba(15, 248, 170, 0.5);
+}
+
+@keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--target-value); }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.3; }
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .terminal {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column; /* Stack header elements vertically */
+    }
+
+    .header > div {
+        width: 100%; /* Full width for header children */
+    }
+
+    .header::before {
+        content: '';
+    }
+
+    .header > div:last-child {
+        margin-top: 20px; /* Increase space between header text and ship/scanner */
+    }
+
+    .ship-and-scanner {
+        transform: scale(0.7);
+        transform-origin: center top;
+        margin: 0 auto;
+        margin-bottom: -15px; /* Reduce space between ship/scanner and scanner text */
+    }
+
+    .scanner-text {
+        font-size: 0.8em;
+        text-align: center;
+        margin-top: 0; /* Ensure no extra space from top margin */
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 5px 0; /* Remove horizontal padding */
+        gap: 10px; /* Add space between > and text */
+    }
+
+    .nav-item a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .blog-post {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .post-title {
+        font-size: 1em;
+    }
+
+    .post-meta {
+        font-size: 0.7em;
+    }
+
+    .post-excerpt {
+        font-size: 0.8em;
+    }
+
+    .data-block {
+        font-size: 0.9em;
+    }
+
+    .metric-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    .metric-label {
+        width: auto;
+    }
+
+    .header-text {
+        font-size: 0.9em; /* Slightly reduce font size on mobile */
+        line-height: 1.4; /* Improve readability of wrapped text */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack items in a single column */
+    }
+}

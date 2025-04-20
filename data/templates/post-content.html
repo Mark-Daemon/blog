@@ -1,0 +1,7 @@
+<div class="blog-content">
+    <div class="post-content-title"> <div class="typing-effect">{{ (str/upper-case (if (:is-section-index post) (:section-name post) (:title post))) }}</div></div>
+    <div class="post-meta">{{ (if (not (:is-home section)) (str/upper-case (str (format-date (:date post)) " " (:meta post)))) }}</div>
+    <div class="post-excerpt">
+        {{ (:content post) }}
+    </div>
+</div>

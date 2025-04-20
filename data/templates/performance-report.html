@@ -1,0 +1,39 @@
+<div class="performance-metrics">
+    <div class="metrics-header">
+        RUNCITER ASSOCIATES
+        <div class="subheader">EMPLOYEE PERFORMANCE REPORT</div>
+        <div class="report-meta">
+            <span>SAFEGUARDING YOUR REALITY™</span>
+            <span class="report-id">{{ (format-date (:date post)) }} - WY-RPT-#45172</span>
+        </div>
+    </div>
+    <div class="metrics-container">
+        <div class="metric-item">
+            <div class="metric-label">MENTAL ACUITY</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: {{ (str (:mental (:performance (:extra post))) "%") }}">
+                    <div class="metric-glow"></div>
+                </div>
+                <div class="metric-value">{{ (str (:mental (:performance (:extra post))) "%") }}</div>
+            </div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-label">PHYSICAL CAPACITY</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: {{ (str (:physical (:performance (:extra post))) "%") }}">
+                    <div class="metric-glow"></div>
+                </div>
+                <div class="metric-value">{{ (str (:physical (:performance (:extra post))) "%") }}</div>
+            </div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-label">PRODUCTIVITY INDEX</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: {{ (str (:productivity (:performance (:extra post))) "%") }}">
+                    <div class="metric-glow"></div>
+                </div>
+                <div class="metric-value">{{ (str (:productivity (:performance (:extra post))) "%") }}</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/blog/favicon.svg">
+    <link rel="stylesheet" href="/blog/styles/index.css">
+    <link rel="stylesheet" href="/blog/styles/scanner.css">
+    <link rel="stylesheet" href="/blog/styles/ship.css">
+    <script src="/blog/js/imports.js"></script>
+    <title>{{ (:short-title blog) }}</title>
+</head>
+<body>
+    <div class="terminal">
+        <div class="scan-line" style="--target-value: 12s"></div>
+        <div class="header">
+            <div class="header-text">
+                NSTRM0://{{ (:terminal-title blog) }}/{{ (str/upper-case (:title section)) }}<span class="blink">_</span>
+                <br>
+                {{ (:long-title blog) }}
+            </div>
+            <div>
+                <div class="ship-and-scanner">
+                    <div class="ship-container">
+                        <canvas id="shipCanvas"></canvas>
+                    </div>
+                    <div class="scanner-container">
+                        <canvas id="scannerCanvas"></canvas>
+                    </div>
+                </div>
+                <div class="scanner-text">
+                    XENOFORM DETECTION ACTIVE
+                    <br>
+                    ENTITIES: 3
+                </div>
+            </div>
+        </div>
+
+        {{ (apply-section "data/templates/navigation.html") }}
+
+       {{ (if (not (nil? (:section-post section))) (apply-section-with-post "data/templates/post-content.html" (:section-post section))) }}
+
+        {%
+            (if (not (zero? (count (:posts section))))
+                (str "<div class=\"status\"><span>{{ (if (:is-home section) \"LATEST\" (:terminal-title blog)) }} PAGES LOADED</span>"
+                "<span>ENTRIES: {{ (if (:is-home section) "3" (count (:posts section))) }}</span></div>")
+            )
+
+        %}
+        {{ (apply-section "data/templates/post-list.html") }}
+
+        {%
+        (do
+            (if (:is-home section)
+                (let [latest-performance (first (filter #(not (nil? (:performance (:extra %)))) (:posts section)))]
+                    (if (not (nil? latest-performance))
+                        (apply-section-with-post "data/templates/performance-report.html" latest-performance)))))
+        %}
+
+        <div class="data-block">
+            SYSTEM STATUS:
+            <br>
+            - XENODATA INTEGRITY: 99.7%
+            <br>
+            - TRANSLATION MATRIX: ACTIVE
+            <br>
+            - QUANTUM ENCRYPTION: ENABLED
+            <br>
+            - AWAITING NEURAL INTERFACE<span class="blink">_</span>
+        </div>
+    </div>
+    <script type="module" src="/blog/js/typing_effect.js"></script>
+    <script type="module" src="/blog/js/ship/ship.js"></script>
+    <script type="module" src="/blog/js/scanner/scanner.js"></script>
+</body>
+</html>
