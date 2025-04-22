@@ -17,8 +17,9 @@ and serve it locally with `python -m http.server`.
 
 I have attached some printed examples below.
 
-<img src="/blog/image/week_notes_6/quiet.jpg" alt="Quiet"  style="width: 250px;"/>
 <div class="grid-container">
+<img src="/blog/image/week_notes_6/quiet.jpg" alt="Quiet"  style="width: 250px;"/>
+<img src="/blog/image/week_notes_7/knight_devil_death.jpg" alt="The Knight, Death and the Devil"  style="width: 250px;"/>
 <img src="/blog/image/week_notes_6/deus_ex_red.jpg" alt="Deux Ex Red"  style="height: 220px;"/>
 <img src="/blog/image/week_notes_6/deus_ex_blue.jpg" alt="Deus Ex Blue"  style="height: 220px;"/>
 </div>
