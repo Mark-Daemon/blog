@@ -7,6 +7,7 @@
             [generator.generate_rss :as rss]
             [generator.template_model :as template_model]
             [generator.templater :as templater]
+            [generator.generate-search :as search]
             [generator.util :as util])
   (:gen-class))
 
@@ -81,7 +82,8 @@
           sections (:sections blog-template)
           index-template (slurp "data/templates/index.html")
           post-template (slurp "data/templates/post-index.html")]
-      (run! #(generate-section blog-template % index-template post-template) sections))
+      (run! #(generate-section blog-template % index-template post-template) sections)
+      (search/generate_search_index! blog-template))
     (rss/generate-rss-feed! blog-data posts-data)))
 
 ;; (require '[generator.core :as core] :reload-all)
@@ -95,7 +97,7 @@
     (println "Site regenerated.")
     (catch Exception e
       (println "Error generating site:")
-      (println (.getMessage e)))))
+      (.printStackTrace e))))
 
 (defn -main
   "Generate blog from templates and yaml data"
