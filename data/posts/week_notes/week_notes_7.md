@@ -64,4 +64,4 @@ Made another print - chosen from the cover of _A Handbook for Dissidents_.
 
 <img src="/blog/image/week_notes_7/knight_devil_death.jpg" alt="The Knight, Death and the Devil"  style="width: 250px;"/>
 
-I started this blog as a place to encourage and improve my writing. However, I have come across a separate objective. I have grown bored of my current career and its trajectory, yet I do not know where to go next. As it provides for a comfortable living, I am not in a rush for change. Through this blog, I will search for an area I should venture into next.
+I started this blog as a place to encourage and improve my writing. However, I now have a concrete objective. I have grown bored of my current career and its trajectory, yet I do not know where to go next. As it provides for a comfortable living, I am not in a rush for change. The plan is to explore (and write about) various topics of interest as a means of searching for where to go next.
