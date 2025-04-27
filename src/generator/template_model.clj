@@ -26,10 +26,10 @@
 (s/def ::long-title string?)
 (s/def ::short-title string?)
 (s/def ::terminal-title string?)
-(s/def ::base-link string?)
+(s/def ::link string?)
 (s/def ::sections (s/coll-of ::TemplateSection))
-(s/def ::TemplateBlog (s/keys :req-un [::short-title ::long-title ::terminal-title ::base-link ::sections]))
-(defrecord TemplateBlog [short-title long-title terminal-title base-link sections])
+(s/def ::TemplateBlog (s/keys :req-un [::short-title ::long-title ::terminal-title ::link ::sections]))
+(defrecord TemplateBlog [short-title long-title terminal-title link sections])
 
 (defn- normalize-ordered-maps
   "Recursively converts all #ordered/map instances to standard Clojure maps."
