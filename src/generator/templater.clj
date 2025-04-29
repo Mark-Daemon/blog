@@ -18,6 +18,28 @@
   [path]
   (slurp path))
 
+(defn- enable-latex
+  []
+  (str """
+  <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css\" integrity=\"sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP\" crossorigin=\"anonymous\">
+  <script defer src=\"https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js\" integrity=\"sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6\" crossorigin=\"anonymous\"></script>
+  <script type=\"module\">
+      import renderMathInElement from \"https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.mjs\";
+          window.addEventListener('DOMContentLoaded', () => {
+                  const elements = document.getElementsByClassName(\"latex\");
+                          for (let element of elements) {
+                                katex.render(element.textContent, element, {
+                                    throwOnError: true,
+                                });
+                          }
+          });
+  </script>
+  """))
+
+(defn- latex
+  [& strings]
+  (reduce #(str %1 "\n<span class=\"latex\">" %2 "</span>\n") ""  strings))
+
 (defn- find-code-block
   "Finds the first location of a code block {{ ... }} or multi-line {% ... %}."
   [template]
