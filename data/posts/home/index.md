@@ -7,3 +7,5 @@ Welcome! This is where I practice writing while developing my ideas. There is no
 I write about whatever currently interests me.
 
 Interests: Tech, Statistics, Literature, and Politics.
+
+Search the blog [here](/blog/tools/search.html).
