@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/blog/favicon.svg">
+    <link rel="stylesheet" href="/blog/styles/index.css">
+    <link rel="stylesheet" href="/blog/styles/scanner.css">
+    <link rel="stylesheet" href="/blog/styles/ship.css">
+    <script async src="https://unpkg.com/es-module-shims/dist/es-module-shims.js"></script>
+    <script src="/blog/js/imports.js"></script>
+    <title>week_notes_8</title>
+</head>
+<body>
+<div class="terminal">
+    <div class="scan-line" style="--target-value: 20s"></div>
+    <div class="header">
+        <div class="header-text">
+            NSTRM0://MD/WEEK_NOTES<span class="blink">_</span>
+            <br>
+            Mark Daemon's Blog v0.0.2
+        </div>
+        <div>
+            <div class="ship-and-scanner">
+                <div class="ship-container">
+                    <canvas id="shipCanvas"></canvas>
+                </div>
+                <div class="scanner-container">
+                    <canvas id="scannerCanvas"></canvas>
+                </div>
+            </div>
+            <div class="scanner-text">
+                XENOFORM DETECTION ACTIVE
+                <br>
+                ENTITIES: 3
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+    <a href="https://mark-daemon.github.io/blog/index.html"><div class="nav-item">> HOME</div></a>
+<a href="https://mark-daemon.github.io/blog/week_notes/index.html"><div class="nav-item">> WEEK_NOTES</div></a>
+<a href="https://mark-daemon.github.io/blog/writing/index.html"><div class="nav-item">> WRITING</div></a>
+<a href="https://mark-daemon.github.io/blog/tools/index.html"><div class="nav-item">> TOOLS</div></a>
+<a href="https://mark-daemon.github.io/blog/about/index.html"><div class="nav-item">> ABOUT</div></a>
+
+</div>
+
+
+    <div class="blog-content">
+    <div class="post-content-title"> <div class="typing-effect">WEEK_NOTES_8</div></div>
+    <div class="post-meta">2025-04-29 </div>
+    <div class="post-excerpt">
+        <p>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
+  <script type="module">
+      import renderMathInElement from "https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.mjs";
+          window.addEventListener('DOMContentLoaded', () => {
+                  const elements = document.getElementsByClassName("latex");
+                          for (let element of elements) {
+                                katex.render(element.textContent, element, {
+                                    throwOnError: true,
+                                });
+                          }
+          });
+  </script>
+  </p><h2>Work</h2><p>Nothing interesting to comment on.<h2>Media</h2><h4>Football Hackers: The Science and Art of a Data Revolution by Christoph Biermann</h4> Football Hackers tells the history of using data science on the football field. Starting from the simpler metrics of possession and shots on goal to the more advanced concepts of "packing" and Expected Goals. The book focuses less on the details than on telling the story of their evolution and impact on the game.</p><p>A key theme throughout the book is the difficulty of finding useful metrics. Simple metrics such as possession can be interpreted in many ways—the team could have been quick on the attack or had instead struggled to maintain possession of the ball. Similarly, early video analysis, which tracked shots on goal and player positioning, failed to find metrics that correlated with winning games. Things start to get interesting when the Expected Goals arrive.</p><p>Expected Goals look at the likelihood of scoring a goal from the position of the shot on goal (dividing up the pitch to do so). This informs the team of where best to shoot from, but also allows us to evaluate the team - did they under or over-perform their Expected Goals. Yet this metric is incomplete for informing the game at large. It fails to model the importance of different roles in the game (such as defence) or the strategies involved.</p><p>Enter measures such as "danger" or "control of field". Voronoi diagrams built upon the distance between players (reflecting the time to get to the ball) estimate how much each team "controls the field". "Danger" follows a similar idea of measuring how each player's actions escalate the chances of scoring. An interesting metric is extending Expected Goals into the chain of actions that lead to the shot, giving us Expected Goal Chains. Another is "packing"; in short, the number of opponents a player has bypassed.</p><p>Throughout the book, the idea of finding the "ideal" model or metric for defining success in the game is repeated. It strikes me that there will not be one — the combination of variance in tactics and player roles is too large. The models presenting the most success appear to focus on the particulars of a team's playing style or strategy (and how the players lend themselves to this strategy).</p><p>Overall, this was not a highlight book for me. There was too much emphasis on telling the story of football, with plenty of namedropping, and too little focus on the analytical details. On the positive side, the book convinced me that football analysis was not for me. Besides the World Cup, I simply am not invested in the game, even when taking a data-driven perspective.<h2>Personal</h2><h4>Search Integration</h4> Integrated a search feature into the site. When building the site, I pre-compute a text-index of search terms and auto-suggestions, then have a small amount of JS pull the records and sort them by the number of matching terms in the query. This project was largely an excuse to write more Clojure.<h4>Personal Metrics</h4> I have been re-thinking my personally tracked metrics. The current Physical/Mental/Productivity is a subjective estimate for the week - I wanted to make these less subjective and more useful. I've chosen to focus on Sleep, Physical Activity, and Productivity.</p><p>For sleep I will track only what time I go to bed at and what time I wake up at. I will use these to score my sleep habits. For going to bed I will score hitting the target of 11pm, with a score of 0 for 3am or beyond. Similarly for waking up, but with hitting the target of 8am, with a score of 0 for 12pm.</p><p>With 
+<span class="latex"><code>T&#95;b</code></span>
+ as time-to-bed and 
+<span class="latex"><code>T&#95;w</code></span>
+ as time-to-wake, the 
+<span class="latex"><code>S&#95;d</code></span>
+ (sleep score) will be calculated as follows: </p><p>
+<span class="latex">S<i>b = &#92;max&#92;left(0, &#92;min&#92;left(100, 100 - 25 &#92;cdot (T</i>b - 23)&#92;right)&#92;right)</span>
+</p><p>
+<span class="latex">S<i>w = &#92;max&#92;left(0, &#92;min&#92;left(100, 100 - 25 &#92;cdot |T</i>w - 8|&#92;right)&#92;right)</span>
+</p><p>
+<span class="latex">S<i>d = &#92;frac&#123;S</i>b + S_w&#125;&#123;2&#125;</span>
+</p><p>Physical activity will follow a similar formula, however it will need to mix 3 workouts with the target of a daily physical activity.</p><p>
+<span class="latex">N_a</span>
+: Number of days with physical activity (max 7, including workout days).</p><p>
+<span class="latex">N_w</span>
+: Number of workouts completed (max 7, but typically <= 3 since that's the goal).</p><p>
+<span class="latex">S_&#123;&#92;text&#123;phys&#125;&#125;</span>
+: Weekly physical activity score.</p><p>
+<span class="latex">S<i>{&#92;text{phys}} = 0.4 &#92;cdot &#92;left( &#92;frac{N</i>a}{D<i>a} &#92;right) + 0.6 &#92;cdot &#92;left( &#92;frac{N</i>w}{W} &#92;right)</span>
+</p><p>For Productivity I will set out a block of time for working on a particular task at the beginning of the week. I will then score this on how many of the planned time blocks were completed, relative to the number planned. This will help me measure my own productivity in terms of time spent working, but also my discipline (following through with what was planned). </p><p>Relatively simple measure compared to the other - divide the number of tasks completed by the number of tasks planned.</p><h4>Latex Support</h4><p>Added Latex support to the blog with Katex.</p>
+    </div>
+</div>
+
+    <div class="performance-metrics">
+    <div class="metrics-header">
+        RUNCITER ASSOCIATES
+        <div class="subheader">EMPLOYEE PERFORMANCE REPORT</div>
+        <div class="report-meta">
+            <span>SAFEGUARDING YOUR REALITY™</span>
+            <span class="report-id">2025-04-29 - WY-RPT-#45172</span>
+        </div>
+    </div>
+    <div class="metrics-container">
+        <div class="metric-item">
+            <div class="metric-label">MENTAL ACUITY</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: 65%">
+                    <div class="metric-glow"></div>
+                </div>
+                <div class="metric-value">65%</div>
+            </div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-label">PHYSICAL CAPACITY</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: 30%">
+                    <div class="metric-glow"></div>
+                </div>
+                <div class="metric-value">30%</div>
+            </div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-label">PRODUCTIVITY INDEX</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: 50%">
+                    <div class="metric-glow"></div>
+                </div>
+                <div class="metric-value">50%</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="data-block">
+        SYSTEM STATUS:
+        <br>
+        - XENODATA INTEGRITY: 99.7%
+        <br>
+        - TRANSLATION MATRIX: ACTIVE
+        <br>
+        - QUANTUM ENCRYPTION: ENABLED
+        <br>
+        - AWAITING NEURAL INTERFACE<span class="blink">_</span>
+    </div>
+</div>
+<script type="module" src="/blog/js/typing_effect.js"></script>
+<script type="module" src="/blog/js/ship/ship.js"></script>
+<script type="module" src="/blog/js/scanner/scanner.js"></script>
+</body>
+</html>
