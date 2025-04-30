@@ -23,6 +23,11 @@ Expected Goals look at the likelihood of scoring a goal from the position of the
 
 Enter measures such as "danger" or "control of field". Voronoi diagrams built upon the distance between players (reflecting the time to get to the ball) estimate how much each team "controls the field". "Danger" follows a similar idea of measuring how each player's actions escalate the chances of scoring. An interesting metric is extending Expected Goals into the chain of actions that lead to the shot, giving us Expected Goal Chains. Another is "packing"; in short, the number of opponents a player has bypassed.
 
+One style of modelling particularly appealed to me: measuring the rate of scoring goals when a particular player was 
+on the pitch relative to when they were not. Across a large number of games, this provides an indication of their
+contribution to scoring. I imagine the commercial model also incorporates their contribution to defence with a similar
+metric. What likely appeals to me the most is that you can easily measure this without having to actually watch the game.
+
 Throughout the book, the idea of finding the "ideal" model or metric for defining success in the game is repeated. It strikes me that there will not be one — the combination of variance in tactics and player roles is too large. The models presenting the most success appear to focus on the particulars of a team's playing style or strategy (and how the players lend themselves to this strategy).
 
 Overall, this was not a highlight book for me. There was too much emphasis on telling the story of football, with plenty of namedropping, and too little focus on the analytical details. On the positive side, the book convinced me that football analysis was not for me. Besides the World Cup, I simply am not invested in the game, even when taking a data-driven perspective.
