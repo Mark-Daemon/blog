@@ -32,6 +32,6 @@
 (defrecord Blog [blog-title])
 (defn create-blog
   "Creates a blog record from title and date"
- ([blog-data]
+ [blog-data]
   {:pre [(s/valid? ::blog blog-data)]}
-  (map->Blog blog-data)))
+  (map->Blog blog-data))
