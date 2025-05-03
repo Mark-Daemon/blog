@@ -1,8 +1,22 @@
 (ns generator.util
   (:import (java.text SimpleDateFormat)
-           (java.util TimeZone)))
+           (java.util TimeZone))
+  (:require [clojure.java.io :as io]))
 
 (def publish-folder "docs/blog/")
+
+(defn delete-directory
+  "Recursively delete a directory and its contents."
+  [raw-dir]
+  (let [dir (if (string? raw-dir)
+              (io/file raw-dir)
+              raw-dir)]
+    (when (.exists dir)
+     (doseq [file (.listFiles dir)]
+       (if (.isDirectory file)
+         (delete-directory file)
+         (io/delete-file file true)))
+     (io/delete-file dir true))))
 
 (defn create-date-formatter
   "Create the style of date formatter to be consistently used across the app"

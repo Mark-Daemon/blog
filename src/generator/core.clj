@@ -8,6 +8,7 @@
             [generator.template_model :as template_model]
             [generator.templater :as templater]
             [generator.generate-search :as search]
+            [generator.generate-clojurescript :as cljs]
             [generator.util :as util])
   (:gen-class))
 
@@ -35,7 +36,11 @@
             (.contains (.getPath file) "templates/js")
             (.contains (.getName file) "favicon")
             (.contains (.getPath file) "image/")
-            (and (.contains (.getPath file) "posts/") (str/ends-with? (.getName file) ".html")))
+            (and (.contains (.getPath file) "posts/")
+                 (or
+                   (str/ends-with? (.getName file) ".html")
+                   (str/ends-with? (.getName file) ".js")
+                   (str/ends-with? (.getName file) ".css"))))
       (do
         (let [parent_dir (cond
                            (.contains (.getPath file) "posts/") #"posts/"
@@ -78,6 +83,7 @@
         posts-data (process-posts-data)]
     (clear-public-directory!)
     (copy-static-files!)
+    (cljs/compile-and-copy-clojurescript!)
     (let [blog-template (template_model/parse-input-to-template-data blog-data posts-data)
           sections (:sections blog-template)
           index-template (slurp "data/templates/index.html")
