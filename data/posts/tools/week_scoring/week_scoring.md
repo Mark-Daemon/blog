@@ -7,3 +7,5 @@ scan-time: 20s
 <script src="/blog/posts/tools/week_scoring/week_scoring.js"></script>
 
 {{ (apply-section "data/posts/tools/week_scoring/week-scoring.html") }}
+---
+{{ (apply-section "data/posts/tools/week_scoring/week-score.html") }}

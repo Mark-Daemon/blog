@@ -6,3 +6,7 @@ scan-time: 20s
 ---
 
 {{ (apply-section "data/templates/search.html") }}
+
+---
+
+{{ (apply-section "data/templates/search-results.html") }}

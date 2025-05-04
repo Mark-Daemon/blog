@@ -5,12 +5,13 @@
 (s/def ::title string?)
 (s/def ::date inst?)
 (s/def ::content string?)
+(s/def ::sub-content (s/or :nil nil? :sub-content string?))
 (s/def ::section string?)
 (s/def ::excerpt string?)
 (s/def ::file-name string?)
 
 ;; Post specs
-(s/def ::post (s/keys :req-un [::title ::date ::section ::excerpt ::file-name ::content]
+(s/def ::post (s/keys :req-un [::title ::date ::section ::excerpt ::file-name ::content ::sub-content]
                       :opt-un [::meta]))
 (s/def ::posts (s/coll-of ::post))
 (defrecord Post [title date section excerpt file-name content])

@@ -43,6 +43,9 @@
 
     {{ (if (not (nil? (:performance (:extra post)))) (apply-section "data/templates/performance-report.html")) }}
 
+{% (if (not (nil? (:sub-content post)))
+    (:sub-content post)) %}
+
 <div class="data-block">
     SYSTEM STATUS:
     <br>
