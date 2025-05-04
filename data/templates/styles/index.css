@@ -590,6 +590,7 @@ input[type="text"]::after, input[type="number"]::after {
 
     .metric-label {
         width: auto;
+        margin-left: 20px;
     }
 
     .header-text {
