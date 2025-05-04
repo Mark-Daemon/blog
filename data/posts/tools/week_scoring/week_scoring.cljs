@@ -38,7 +38,7 @@
         active-component (* 0.4 (/ active-days max-active-days))
         workout-component (* 0.6 (/ workouts max-workouts))
         physical-score (+ active-component workout-component)]
-    (* physical-score 100)))
+    (* (min (max physical-score 0) 1) 100)))
 
 (defn calculate-productivity-score
   "Calculates productivity score based on completed vs planned tasks"
