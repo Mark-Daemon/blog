@@ -18,6 +18,20 @@
          (io/delete-file file true)))
      (io/delete-file dir true))))
 
+(defn to-future
+  [f]
+  (future
+    (try
+       (f)
+       (catch Exception e
+         (.printStackTrace e)
+          (throw e)))))
+
+(defn resolve-futures
+  [tasks]
+  (doseq [f tasks]
+    (deref f 60000 {:timeout true})))
+
 (defn create-date-formatter
   "Create the style of date formatter to be consistently used across the app"
   []
