@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/blog/favicon.svg">
+    <link rel="stylesheet" href="/blog/styles/index.css">
+    <link rel="stylesheet" href="/blog/styles/scanner.css">
+    <link rel="stylesheet" href="/blog/styles/ship.css">
+    <script async src="https://unpkg.com/es-module-shims/dist/es-module-shims.js"></script>
+    <script src="/blog/js/imports.js"></script>
+    <title>week_notes_9</title>
+</head>
+<body>
+<div class="terminal">
+    <div class="scan-line" style="--target-value: 20s"></div>
+    <div class="header">
+        <div class="header-text">
+            NSTRM0://MD/WEEK_NOTES<span class="blink">_</span>
+            <br>
+            Mark Daemon's Blog v0.0.2
+        </div>
+        <div>
+            <div class="ship-and-scanner">
+                <div class="ship-container">
+                    <canvas id="shipCanvas"></canvas>
+                </div>
+                <div class="scanner-container">
+                    <canvas id="scannerCanvas"></canvas>
+                </div>
+            </div>
+            <div class="scanner-text">
+                XENOFORM DETECTION ACTIVE
+                <br>
+                ENTITIES: 3
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+    <a href="https://mark-daemon.github.io/blog/index.html"><div class="nav-item">> HOME</div></a>
+<a href="https://mark-daemon.github.io/blog/week_notes/index.html"><div class="nav-item">> WEEK_NOTES</div></a>
+<a href="https://mark-daemon.github.io/blog/writing/index.html"><div class="nav-item">> WRITING</div></a>
+<a href="https://mark-daemon.github.io/blog/tools/index.html"><div class="nav-item">> TOOLS</div></a>
+<a href="https://mark-daemon.github.io/blog/about/index.html"><div class="nav-item">> ABOUT</div></a>
+
+</div>
+
+
+    <div class="blog-content">
+    <div class="post-content-title"> <div class="typing-effect">WEEK_NOTES_9</div></div>
+    <div class="post-meta">2025-05-04 </div>
+    <div class="post-excerpt">
+        <h2>Work</h2><p>Work is splashing out on Google Cloud qualifications. I signed up for the architect and machine-learning courses. I've seen these courses mentioned on other people's CVs, but I've never done one myself. With a bit of luck, they'll be decent.</p><h2>Media</h2><h4>Oblivion Remaster</h4><p>Too much of my childhood was spent playing Oblivion, and now too much of my adulthood has also been spent playing it. Likely the nostalgia speaking, but I thought it was one of the best games released in recent times. I don't generally play many games or watch many movies anymore; the industries have moved in a direction that doesn't appeal to me.</p><h2>Personal</h2><h4>Personal Metrics</h4><p>I wrote a page for tracking and "scoring" my week <a href='/blog/tools/week_scoring.html'>here</a>. It implements the scoring I described <a href='/blog/week_notes/week_notes_8.html'>last week</a>.</p><p>This was implemented in Clojure-Script, which I integrated into the site.</p><h4>Clojure-Script Integration</h4><p>As I have continued looking for excuses to write Clojure, I integrated Clojure-Script into the site. The process was simple - I can now write Clojure-Script code in dedicated files and have them compiled alongside the overall static-site generation into Javascript. However, it is slower than I had hoped.</p><p>I have some thoughts on implementing a caching solution to speed it up. Along the lines of storing the compiled JS alongside the last-modified date of the .cljs file and only re-compiling as needed. Perhaps next week.</p>
+    </div>
+</div>
+
+    <div class="performance-metrics">
+    <div class="metrics-header">
+        RUNCITER ASSOCIATES
+        <div class="subheader">EMPLOYEE PERFORMANCE REPORT</div>
+        <div class="report-meta">
+            <span>SAFEGUARDING YOUR REALITY™</span>
+            <span class="report-id">2025-05-04 - WY-RPT-#45172</span>
+        </div>
+    </div>
+    <div class="metrics-container">
+        <div class="metric-item">
+            <div class="metric-label">COGNITIVE RECOVERY</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: 52%">
+                    <div class="metric-glow"></div>
+                    <div class="metric-value">52%</div>
+                </div>
+            </div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-label">KINETIC OUTPUT</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: 20%">
+                    <div class="metric-glow"></div>
+                    <div class="metric-value">20%</div>
+                </div>
+            </div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-label">PERFORMANCE YIELD</div>
+            <div class="metric-bar">
+                <div class="metric-fill" style="--target-value: 60%">
+                    <div class="metric-glow"></div>
+                    <div class="metric-value">60%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="data-block">
+    SYSTEM STATUS:
+    <br>
+    - XENODATA INTEGRITY: 99.7%
+    <br>
+    - TRANSLATION MATRIX: ACTIVE
+    <br>
+    - QUANTUM ENCRYPTION: ENABLED
+    <br>
+    - AWAITING NEURAL INTERFACE<span class="blink">_</span>
+</div>
+<script type="module" src="/blog/js/typing_effect.js"></script>
+<script type="module" src="/blog/js/ship/ship.js"></script>
+<script type="module" src="/blog/js/scanner/scanner.js"></script>
+</body>
+</html>

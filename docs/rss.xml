@@ -34,6 +34,13 @@
 <guid isPermaLink="true">https://mark-daemon.github.io/blog/week_notes/week_notes_6.html</guid>
 </item>
 <item>
+<title>week_notes_9</title>
+<link>https://mark-daemon.github.io/blog/week_notes/week_notes_9.html</link>
+<description>Oblivion and Personal Metrics in Clojure.</description>
+<pubDate>Sun, 04 May 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/week_notes/week_notes_9.html</guid>
+</item>
+<item>
 <title>week_notes_8</title>
 <link>https://mark-daemon.github.io/blog/week_notes/week_notes_8.html</link>
 <description>Football Hackers, Search Integration, and rethinking personal metrics.</description>
@@ -74,6 +81,13 @@
 <description>Search this blog!</description>
 <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
 <guid isPermaLink="true">https://mark-daemon.github.io/blog/tools/search.html</guid>
+</item>
+<item>
+<title>Weekly Scoring</title>
+<link>https://mark-daemon.github.io/blog/tools/week_scoring.html</link>
+<description>Calculating metrics for sleep, physical activity and productivity.</description>
+<pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate>
+<guid isPermaLink="true">https://mark-daemon.github.io/blog/tools/week_scoring.html</guid>
 </item>
 <item>
 <title>STL Colour Preview Tool</title>

@@ -32,7 +32,6 @@
 
 .suggestion-item:hover {
     background-color: rgba(0, 255, 170, 0.1);
-    transform: translateX(5px);
 }
 
 #search-input {

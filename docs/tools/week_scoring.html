@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/blog/favicon.svg">
+    <link rel="stylesheet" href="/blog/styles/index.css">
+    <link rel="stylesheet" href="/blog/styles/scanner.css">
+    <link rel="stylesheet" href="/blog/styles/ship.css">
+    <script async src="https://unpkg.com/es-module-shims/dist/es-module-shims.js"></script>
+    <script src="/blog/js/imports.js"></script>
+    <title>Weekly Scoring</title>
+</head>
+<body>
+<div class="terminal">
+    <div class="scan-line" style="--target-value: 20s"></div>
+    <div class="header">
+        <div class="header-text">
+            NSTRM0://MD/TOOLS<span class="blink">_</span>
+            <br>
+            Mark Daemon's Blog v0.0.2
+        </div>
+        <div>
+            <div class="ship-and-scanner">
+                <div class="ship-container">
+                    <canvas id="shipCanvas"></canvas>
+                </div>
+                <div class="scanner-container">
+                    <canvas id="scannerCanvas"></canvas>
+                </div>
+            </div>
+            <div class="scanner-text">
+                XENOFORM DETECTION ACTIVE
+                <br>
+                ENTITIES: 3
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+    <a href="https://mark-daemon.github.io/blog/index.html"><div class="nav-item">> HOME</div></a>
+<a href="https://mark-daemon.github.io/blog/week_notes/index.html"><div class="nav-item">> WEEK_NOTES</div></a>
+<a href="https://mark-daemon.github.io/blog/writing/index.html"><div class="nav-item">> WRITING</div></a>
+<a href="https://mark-daemon.github.io/blog/tools/index.html"><div class="nav-item">> TOOLS</div></a>
+<a href="https://mark-daemon.github.io/blog/about/index.html"><div class="nav-item">> ABOUT</div></a>
+
+</div>
+
+
+    <div class="blog-content">
+    <div class="post-content-title"> <div class="typing-effect">WEEKLY SCORING</div></div>
+    <div class="post-meta">2025-05-03 </div>
+    <div class="post-excerpt">
+        <p><script src="/blog/posts/tools/week_scoring/week_scoring.js"></script></p><p><h3>Sleep Tracking</h3>
+<p>Penalises going to bed earlier or later than 11pm and waking up earlier or later than 8am.</p>
+<div class="grid-container">
+    <!-- Day 1 -->
+    <div>
+        <div class="post-content-title">Day 1</div>
+        <input id="bedtime-day-1" type="text" placeholder="Bedtime (HH:MM)" class="search-input">
+        <input id="wake-time-day-1" type="text" placeholder="Wake Time (HH:MM)" class="search-input">
+    </div>
+    <!-- Day 2 -->
+    <div>
+        <div class="post-content-title">Day 2</div>
+        <input id="bedtime-day-2" type="text" placeholder="Bedtime (HH:MM)" class="search-input">
+        <input id="wake-time-day-2" type="text" placeholder="Wake Time (HH:MM)" class="search-input">
+    </div>
+    <!-- Day 3 -->
+    <div>
+        <div class="post-content-title">Day 3</div>
+        <input id="bedtime-day-3" type="text" placeholder="Bedtime (HH:MM)" class="search-input">
+        <input id="wake-time-day-3" type="text" placeholder="Wake Time (HH:MM)" class="search-input">
+    </div>
+    <!-- Day 4 -->
+    <div>
+        <div class="post-content-title">Day 4</div>
+        <input id="bedtime-day-4" type="text" placeholder="Bedtime (HH:MM)" class="search-input">
+        <input id="wake-time-day-4" type="text" placeholder="Wake Time (HH:MM)" class="search-input">
+    </div>
+    <!-- Day 5 -->
+    <div>
+        <div class="post-content-title">Day 5</div>
+        <input id="bedtime-day-5" type="text" placeholder="Bedtime (HH:MM)" class="search-input">
+        <input id="wake-time-day-5" type="text" placeholder="Wake Time (HH:MM)" class="search-input">
+    </div>
+    <!-- Day 6 -->
+    <div>
+        <div class="post-content-title">Day 6</div>
+        <input id="bedtime-day-6" type="text" placeholder="Bedtime (HH:MM)" class="search-input">
+        <input id="wake-time-day-6" type="text" placeholder="Wake Time (HH:MM)" class="search-input">
+    </div>
+    <!-- Day 7 -->
+    <div>
+        <div class="post-content-title">Day 7</div>
+        <input id="bedtime-day-7" type="text" placeholder="Bedtime (HH:MM)" class="search-input">
+        <input id="wake-time-day-7" type="text" placeholder="Wake Time (HH:MM)" class="search-input">
+    </div>
+</div>
+<h3>Physical Activity Tracking</h3>
+<p>Scores against a goal of 4 days with a light physical activity and 3 days including a workout per week.</p>
+<div class="grid-container">
+    <!-- Activity Inputs -->
+    <input id="active-days" type="number" placeholder="Active Days" class="search-input">
+    <input id="workouts" type="number" placeholder="Workouts" class="search-input">
+</div>
+<h3>Productivity Tracking</h3>
+<p>Each week set the number of planned tasks (typically "time spent working on xyz"), then scores against how many were done.</p>
+<div class="grid-container">
+    <!-- Productivity Inputs -->
+    <input id="tasks-planned" type="number" placeholder="Tasks Planned" class="search-input">
+    <input id="tasks-completed" type="number" placeholder="Tasks Completed" class="search-input">
+</div>
+<div>
+    <div id="reset-button" class="nav-item"
+         style="width: fit-content; margin: 16px 8px;">> RESET</div>
+</div>
+</p>
+    </div>
+</div>
+
+    
+
+<div class="performance-metrics">
+    <div class="metrics-header">
+        RUNCITER ASSOCIATES
+        <div class="subheader">EMPLOYEE PERFORMANCE REPORT</div>
+        <div class="report-meta">
+            <span>SAFEGUARDING YOUR REALITY™</span>
+            <span class="report-id">2025-05-03 - WY-RPT-#45172</span>
+        </div>
+    </div>
+    <div class="metrics-container">
+        <div class="metric-item">
+            <div class="metric-label">COGNITIVE RECOVERY</div>
+            <div class="metric-bar">
+                <div id="sleep-bar" class="metric-fill-trans" style="--target-value: 0%">
+                    <div class="metric-glow"></div>
+                    <span id="sleep-score" class="metric-value"></span>
+                </div>
+            </div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-label">KINETIC OUTPUT</div>
+            <div class="metric-bar">
+                <div id="physical-bar" class="metric-fill-trans">
+                    <div class="metric-glow"></div>
+                    <span id="physical-score" class="metric-value"></span>
+                </div>
+            </div>
+        </div>
+        <div class="metric-item">
+            <div class="metric-label">PERFORMANCE YIELD</div>
+            <div class="metric-bar">
+                <div id="productivity-bar" class="metric-fill-trans">
+                    <div class="metric-glow"></div>
+                    <span id="productivity-score" class="metric-value"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="data-block">
+    SYSTEM STATUS:
+    <br>
+    - XENODATA INTEGRITY: 99.7%
+    <br>
+    - TRANSLATION MATRIX: ACTIVE
+    <br>
+    - QUANTUM ENCRYPTION: ENABLED
+    <br>
+    - AWAITING NEURAL INTERFACE<span class="blink">_</span>
+</div>
+<script type="module" src="/blog/js/typing_effect.js"></script>
+<script type="module" src="/blog/js/ship/ship.js"></script>
+<script type="module" src="/blog/js/scanner/scanner.js"></script>
+</body>
+</html>
