@@ -7,7 +7,9 @@
                  [org.clojure/spec.alpha "0.3.218"]
                  [clj-commons/clj-yaml "1.0.29"]
                  [markdown-clj "1.12.3"]
-                 [cheshire "6.0.0"]]
+                 [cheshire "6.0.0"]
+                 [org.clojure/clojurescript "1.11.54"]]
+  :resource-paths ["data"]
   :main ^:skip-aot generator.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot      :all

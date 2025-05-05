@@ -226,9 +226,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const results = performSearch(searchText);
                 displaySearchResults(results);
             } else {
+                const entryCount = document.getElementById('entry-count');
                 const resultsContainer = document.getElementById('search-results');
                 if (resultsContainer) {
                     resultsContainer.innerHTML = '';
+                }
+                if (entryCount) {
+                    entryCount.textContent = 0;
                 }
                 suggestionsContainer.style.display = 'none';
             }
